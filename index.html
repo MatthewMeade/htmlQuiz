@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz</title>
+
+    <meta charset="utf-8"/>
+
+    <link type="text/css" rel="stylesheet" href="styles/emailPage.css">
+    <link type="text/css" rel="stylesheet" href="styles/form.css">
+    <link type="text/css" rel="stylesheet" href="styles/page.css">
+    <link type="text/css" rel="stylesheet" href="styles/img.css">
+
+    <style type="text/css">
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+
+        <h1 id="title">HTML Quiz</h1>
+        <div id="emailRequest">
+            <p>This is a simple HTML quiz testing basic knowelege of the language</p>
+            <p>If you would like the results sent to you by email, enter it below!</p>
+            <input type="email" name="userMail" placeholder="example@example.com" id="emailPrompt" form="quiz">
+            <div id="emailButtons">
+                <button id="yesEmail">Send me the email</button>
+                <button id="noEmail">Continue without email</button>
+            </div>
+            <p id="emailWarning" class="hidden">Invalid Email</p>
+        </div>
+        <div id="quizDiv" class="hidden">
+            <div id="backToTopLink"><a href="#title">Back to top</a></div>
+            <form id="quiz" action="submit.php" method="post">
+                <h2>Question 1</h2>
+
+                <div class="question">
+                    <div class="check mixAns">
+                        <h3>Select all inline elements</h3>
+                        <label class="ans">
+                            <input type="checkbox" name="inlineSelect" value="a"> &lt;b&gt;
+                        </label>
+
+                        <label class="ans">
+                            <input type="checkbox" name="inlineSelect" value="b"> &lt;span&gt;
+                        </label><br>
+
+                        <label class="ans">
+                            <input type="checkbox" name="inlineSelect" value="c"> &lt;input&gt;
+                        </label>
+
+                        <label class="ans">
+                            <input type="checkbox" name="inlineSelect" value="d"> &lt;sub&gt;
+                        </label><br>
+
+                        <label class="ans">
+                            <input type="checkbox" name="inlineSelect" value="c"> &lt;div&gt;
+                        </label>
+
+                        <label class="ans">
+                            <input type="checkbox" name="inlineSelect" value="d"> &lt;p&gt;
+                        </label>
+
+                    </div>
+                </div>
+
+                <h2>Question 2</h1>
+                <div class="question">
+                    <div class="quadImage mixAns">
+                        <h3>Which is the correct way to start a HTML page?</h3>
+                        <label class="optionL ans">
+                            <input type="radio" name="htmlTemplate" value="a" required> <img src="quizSnips/htmlTemplateA.PNG"> </label>
+                        <label class="optionR ans">
+                            <input type="radio" name="htmlTemplate" value="b"> <img src="quizSnips/htmlTemplateB.PNG"> </label>
+                        <label class="optionL ans">
+                            <input type="radio" name="htmlTemplate" value="c"> <img src="quizSnips/htmlTemplateC.PNG"> </label>
+                        <label class="optionR ans">
+                            <input type="radio" name="htmlTemplate" value="a"> <img src="quizSnips/htmlTemplateD.PNG"> </label>
+                    </div>
+                </div>
+                <h2>Question 3</h2>
+                <div class="question">
+                    <div class="textLine mixAns">
+                        <h3>Which creates bold text</h3>
+                        <label class="ans">
+                            <input type="radio" name="bold" value="a" required> &lt;b&gt;Text&lt;/b&gt; </label><br>
+                        <label class="ans">
+                            <input type="radio" name="bold" value="b"> &lt;bold&gt;Text&lt;/bold&gt; </label><br>
+                        <label class="ans">
+                            <input type="radio" name="bold" value="c"> &lt;p style="bold"&gt;Text&lt;/p&gt; </label><br>
+                        <label class="ans">
+                            <input type="radio" name="bold" value="d"> &lt;p bold&gt;Text&lt;/p&gt; </label><br>
+                    </div>
+                </div>
+                <h2>Question 4</h2>
+                <div class="question">
+                    <div class="imageTop">
+                        <h3>What HTML creates the following text:</h3>
+                        <p class="outputExample"><b>HTML</b> is <ins>the</ins> best language <i>ever</i></p> <img src="quizSnips/textStyle.PNG">
+                        <label class="ans">
+                            <input type="radio" name="textStyle" value="a" required> A </label>
+                        <label class="ans">
+                            <input type="radio" name="textStyle" value="b"> B </label>
+                        <label class="ans">
+                            <input type="radio" name="textStyle" value="c"> C </label>
+                        <label class="ans">
+                            <input type="radio" name="textStyle" value="d"> D </label>
+                    </div>
+                </div>
+                <h2>Question 5</h2>
+                <div class='question'>
+                    <div class='imageLeft mixAns'>
+                        <h3>On what line is the miswidth: auto;take</h3> <img src='quizSnips/escapeError.png'>
+                        <label class='ans'>
+                            <input type='radio' name='escapeError' value='a' required> 8 </label>
+                        <br>
+                        <label class='ans'>
+                            <input type='radio' name='escapeError' value='b' required> 12 </label>
+                        <br>
+                        <label class='ans'>
+                            <input type='radio' name='escapeError' value='c' required> 16 </label>
+                        <br>
+                        <label class='ans'>
+                            <input type='radio' name='escapeError' value='d' required> 15 </label>
+                        <br> </div>
+                </div>
+                <h2>Question 7</h2>
+                <div class="question">
+                    <div class="trueFalse">
+                        <h3>HTML stands for Hyper Text Markup Language</h3>
+                        <label class="ans">
+                            <input type="radio" name='htmlMeaning' value='a'> True
+                        </label>
+                        <label class="ans">
+                            <input type="radio" name='htmlMeaning' value='b'> False
+                        </label>
+                    </div>
+                </div>
+
+
+            <h2>Done?</h2>
+            <input type="submit" value="Submit Answers" id="submitButton">
+
+            <input type="hidden" name="startTime" value="" id="startTime">
+            </form>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="scripts/shuffle.js"></script>
+    <script type="text/javascript" src="scripts/start.js"></script>
+
+    <script type="text/javascript">
+
+    </script>
+
+</body>
+
+</html>

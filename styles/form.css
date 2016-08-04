@@ -1,0 +1,62 @@
+form {
+    width: 95%;
+    margin: 0 auto;
+}
+
+
+.quadImage .optionL {
+    float: left;
+
+}
+
+.quadImage .optionR {
+    float: right;
+
+}
+
+.quadImage img {
+    vertical-align: top;
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.quadImage label{
+  width: 45%; !important
+}
+
+label {
+    display: inline-block;
+    font-size: 150%;
+    margin-right: 20px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#submitButton {
+    color: black;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    background: #eee;
+    background-image: linear-gradient(to bottom, #eee, #aaa);
+}
+
+#submitButton:hover {
+    background: #aaa;
+}
+
+.outputExample {
+    font-size: 150%;
+    text-align: center;
+    background-color: rgba(256, 256, 256, 0.3);
+    
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.check .ans{
+  text-align: left;
+  width: 20%;
+}

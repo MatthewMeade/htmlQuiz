@@ -1,0 +1,74 @@
+body {
+    background-image: url(../images/code.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+}
+
+
+#page {
+    width: 75%;
+    height: 700px;
+    background-color: rgba(255, 255, 255, 0.9);
+    margin: 0 auto;
+    position: relative;
+    top: -8px;
+}
+
+#title {
+    text-align: center;
+    font-size: 600%;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-bottom: 25px;
+
+}
+
+h2 {
+    clear: both;
+    border-bottom: 1px solid black;
+    padding-top: 100px;
+}
+
+h3 {
+    text-align: left;
+    font-size: 150%;
+}
+
+#backToTopLink{
+  width: 150px;
+  position: fixed;
+  bottom: 5px;
+  right: 7px;
+
+  background-color: white;
+  text-align: center;
+
+  font-weight: bold;
+
+  font-size: 120%;
+
+  /*border-radius: 10%;
+
+  box-shadow: 0 3px 5px 0 white;
+  border: 3px solid black;*/
+
+
+}
+
+#backToTopLink:hover{
+  box-shadow: 0 0px 10px 6px white;
+  bottom: 10px;
+}
+
+#backToTopLink a{
+  color: black;
+  text-decoration: none;
+}
+
+#backToTopLink a:visited{
+  color: black;
+  text-decoration: none;
+  background-color: red;
+}

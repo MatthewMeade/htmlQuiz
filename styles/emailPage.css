@@ -1,0 +1,54 @@
+#emailRequest>p {
+    text-align: center;
+    font-size: 150%;
+    margin: 10px 0 10px 0;
+}
+
+#emailPrompt {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    font-weight: bold;
+    font-size: 200%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#emailButtons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#emailButtons button {
+    color: white;
+    border-radius: 15px;
+    border: none;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    /*width: 250px;*/
+    margin: 20px 5px;
+}
+
+#yesEmail {
+    background: #0d0;
+    background-image: linear-gradient(to bottom, #0d0, #0a0);
+}
+
+#yesEmail:hover {
+    background: #0a0;
+}
+
+#noEmail {
+    background: #d00;
+    background-image: linear-gradient(to bottom, #d00, #a00);
+}
+
+#noEmail:hover {
+    background: #a00;
+}
+
+#emailWarning {
+    color: #e22;
+    font-weight: bold;
+}
