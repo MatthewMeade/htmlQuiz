@@ -17,7 +17,7 @@ void textLine(bool multi){
         fprintf(file, "\t\t<label class='ans'>\n");
 
         fprintf(file, "\t\t\t<input type='radio' name='%s' value='%c' required>", name, 'a' + i);
-        //printf("Answer %c: ", 'A' + i);
+        printf("Answer %c: ", 'A' + i);
         fprintf(file, " %s\n", GetString());
 
         fprintf(file, "\t\t</label>\n%s\n", multi ? " <br>" : "");

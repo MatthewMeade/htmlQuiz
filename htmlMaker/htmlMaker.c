@@ -32,7 +32,9 @@ int main(int argc, char* argv[]){
       PrintStart(i);
       PrintQuestion();
 
+      
       PrintContents();
+
 
       PrintEnd();
 
