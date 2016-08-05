@@ -10,7 +10,8 @@
     }else{
         echo "ERROR POST NULL";
     }
-
+    
+    //This is a change made to the results branch
     if($emailUsed){
         echo "Email Sent<br>";
     }else{
