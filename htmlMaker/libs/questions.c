@@ -20,7 +20,7 @@ void textLine(bool multi){
         printf("Answer %c: ", 'A' + i);
         fprintf(file, " %s\n", GetString());
 
-        fprintf(file, "\t\t</label>\n%s\n", multi ? " <br>" : "");
+        fprintf(file, "\t\t</label>\n%s\n", multi ? " \t\t<br>" : "");
     }
 }
 
@@ -50,12 +50,7 @@ void check(){
 }
 
 
-void imageTop(){
+void image(bool left){
     fprintf(file, "\t\t<img src='quizSnips/%s.png'>\n", name);
-    textLine(false);
-}
-
-void imageLeft(){
-    fprintf(file, "\t\t<img src='quizSnips/%s.png'>\n", name);
-    textLine(true);
+    textLine(left);
 }

@@ -1,7 +1,6 @@
 #include <cs50.h>
 void textLine(bool multi);
-void imageTop();
-void imageLeft();
+void image(bool left);
 void quadImage();
 void trueFalse();
 void check();

@@ -57,10 +57,10 @@ void PrintContents(){
                     textLine(false);
                     break;
                 case 2:
-                    imageTop();
+                    image(false);
                     break;
                 case 3:
-                    imageLeft();
+                    image(true);
                     break;
                 case 4:
                     quadImage();
