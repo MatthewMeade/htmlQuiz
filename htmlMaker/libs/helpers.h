@@ -1,5 +1,5 @@
 #include <cs50.h>
-void PrintStart();
+void PrintStart(int i);
 void PrintEnd();
 void PrintQuestion();
 char* GetClass();

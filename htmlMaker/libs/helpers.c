@@ -2,23 +2,25 @@
 #include "questions.h"
 #include "helpers.h"
 
-#define CLASSNUM 7
-char* validClasses[CLASSNUM] = {"textMultiLine", "textLine", "imageTop", "imageLeft", "quadImage", "trueFalse", "check"};
+#define CLASSNUM 8
+char* validClasses[CLASSNUM] = {"textMultiLine", "textLine", "imageTop", "imageLeft", "quadImage", "trueFalse", "check", "quit"};
 
-void PrintStart(){
+void PrintStart(int i){
 
-    fputs("<div class='question'>\n" , file);
+    fprintf(file, "<h2>Question %i</h2>", i);
+    fputs("\n<div class='question'>\n" , file);
     fprintf(file, "\t<div class='%s %s'>\n", className, MixAns() ? "mixAns" : "");
 }
 
 void PrintEnd(){
-    fputs("\t</div>\n</div>\n", file);
+    fputs("\t</div>\n</div>\n\n", file);
     printf("\n");
 }
 
 void PrintQuestion(){
     printf("What is the question?: ");
     char* heading = GetString();
+
 
     fprintf(file, "\t\t<h3>%s</h3>\n", heading);
 }
@@ -69,12 +71,16 @@ void PrintContents(){
                 case 6:
                     check();
                     break;
+                  case 7:
+                    return;
+                    break;
                 default:
                     printf("Unknown class\n");
                     break;
            }
        }
     }
+
 }
 
 char* GetName(){

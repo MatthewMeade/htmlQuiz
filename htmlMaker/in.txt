@@ -1,0 +1,10 @@
+quadImage
+qItest
+y
+To Be or not to be
+
+trueFalse
+tfTest
+n
+This is a tf question
+quit

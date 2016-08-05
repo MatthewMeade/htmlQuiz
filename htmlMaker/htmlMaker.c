@@ -21,20 +21,29 @@ int main(int argc, char* argv[]){
         return 2;
     }
 
-    //This should only be in the maker branch
 
 
+    int i = 1;
+
+    while(true){
+      className = GetClass();
+      name = GetName();
+
+      PrintStart(i);
+      PrintQuestion();
+
+      PrintContents();
+
+      PrintEnd();
+
+      printf("Press enter to continue or type anything to quit: ");
+      if(strcmp(GetString(), "") != 0){
+          break;
+      }
 
 
-    className = GetClass();
-    name = GetName();
-
-    PrintStart();
-    PrintQuestion();
-
-    PrintContents();
-
-    PrintEnd();
+      i++;
+    }
 
     fclose(file);
 }
