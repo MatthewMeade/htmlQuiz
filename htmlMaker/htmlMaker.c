@@ -21,6 +21,10 @@ int main(int argc, char* argv[]){
         return 2;
     }
 
+    //This should only be in the maker branch
+
+
+
 
     className = GetClass();
     name = GetName();
