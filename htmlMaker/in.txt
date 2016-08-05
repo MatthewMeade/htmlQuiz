@@ -1,6 +1,7 @@
 textMultiLine
 [Question Name]
-[Shuffle y\n]n[Question]
+n
+[Question]
 [Answer A]
 [Answer B]
 [Answer C]
