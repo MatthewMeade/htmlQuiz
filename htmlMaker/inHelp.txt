@@ -2,5 +2,54 @@ textMultiLine
 [Question Name]
 [Shuffle y\n]
 [Question]
+[Answer A]
+[Answer B]
+[Answer C]
+[Answer D]
 
 textLine
+[Question Name]
+[Shuffle y\n]
+[Question]
+[Answer A]
+[Answer B]
+[Answer C]
+[Answer D]
+
+imageTop
+[Question Name]
+[Shuffle y\n]
+[Question]
+[Answer A]
+[Answer B]
+[Answer C]
+[Answer D]
+
+imageLeft
+[Question Name]
+[Shuffle y\n]
+[Question]
+[Answer A]
+[Answer B]
+[Answer C]
+[Answer D]
+
+quadImage
+[Question Name]
+[Shuffle y\n]
+[Question]
+
+trueFalse
+[Question Name]
+[Shuffle y\n]
+[Question]
+
+check
+[Question Name]
+[Shuffle y\n]
+[Question]
+[Num of options]
+[Num of columns]
+[Answer 1]
+...
+[Last Answer]

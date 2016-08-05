@@ -1,10 +1,55 @@
+textMultiLine
+[Question Name]
+[Shuffle y\n]n[Question]
+[Answer A]
+[Answer B]
+[Answer C]
+[Answer D]
+
+textLine
+[Question Name]
+n
+[Question]
+[Answer A]
+[Answer B]
+[Answer C]
+[Answer D]
+
+imageTop
+[Question Name]
+n
+[Question]
+[Answer A]
+[Answer B]
+[Answer C]
+[Answer D]
+
+imageLeft
+[Question Name]
+n
+[Question]
+[Answer A]
+[Answer B]
+[Answer C]
+[Answer D]
+
 quadImage
-qItest
-y
-To Be or not to be
+[Question Name]
+n
+[Question]
 
 trueFalse
-tfTest
+[Question Name]
 n
-This is a tf question
+[Question]
+
+check
+[Question Name]
+n
+[Question]
+3
+1
+A
+B
+C
 quit
