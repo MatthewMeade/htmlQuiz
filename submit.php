@@ -129,18 +129,53 @@
         text-align: center;
       }
       
+      a{
+        font-weight: bold;
+        
+      }
+      
+      .tag{
+        background-color:#EEE;
+        border-radius: 30%;
+        
+      }
+      
+      #top{
+        position: relative;
+        top: -300px;
+      }
+      
+      #rightList{
+        position: relative;
+        left: -700px;
+      }
+      
+      #wrongList{
+        position: relative;
+        left: 700px;
+      }
+      
+      .list-group-item{
+        height: 0px;
+        font-size: 0px;
+        padding-top: 0;
+        padding-bottom: 5px;
+      }
+      
     </style>
   </head>
   <body>
     
-    <h1 class="display-3">Results</h1>
+    <span id="top">
+    <h1 class="display-3" id="title">Results</h1>
     <div class="container">
       <div class="jumbotron gootScoreTron">
-        <h1 class="display-1" id="gradeDisplay"> <?php echo $grade; ?>%</h1>
-        <progress class="progress progress-striped progress-success" value="<?php echo $grade; ?>" max="100"></progress>
+        <h1 class="display-1" id="gradeDisplay">??%</h1>
+        <progress class="progress progress-striped progress-success" value="0" max="100"></progress>
         <h4>Time to complete: <?php echo $outString; ?></h2>
       </div>
     </div>
+    </span>
     
     <div class="container">
       <div class="col-md-4" id="rightList">
@@ -283,8 +318,66 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
   
+    
     <script type="text/javascript">
+    
+      StartPageAnim();
       
+      
+      function StartPageAnim(){
+        TopAnim();
+        
+      }
+      
+      function TopAnim(){
+        $("#top").animate({
+          top: "0px"
+        }, 1000, function(){
+          ListAnim("#rightList");
+          ListAnim("#wrongList");
+          
+        });
+      }
+      
+      var setIntervalID = null;
+      
+      function ListAnim(list){
+        $(list).animate({
+          left: "0"
+        }, 1000, function(){
+          ListElementAnim()
+          if(setIntervalID == null){
+              setIntervalID = setInterval(ScoreDisplay, 50);
+          }
+        });
+      }
+      
+      
+      
+      function ListElementAnim(){
+        $(".list-group-item").animate({
+          height: "50px", 
+          fontSize: "100%",
+          padding: "5px"
+        }, 1000, function(){
+          
+        });
+      }
+      
+      
+      var displayCounter = 0;
+      
+      function ScoreDisplay(){
+        if(displayCounter <= <?php echo $grade; ?>){
+          $("#gradeDisplay").html(displayCounter+"%");
+          $(".progress").attr("value", displayCounter)
+          displayCounter++;
+        }else{
+          clearInterval(setIntervalID);
+        }
+        
+      }
+          
     </script>
   </body>
 
