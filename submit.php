@@ -89,86 +89,203 @@
     // echo "Total in seconds: ".$totalTime."s<br>";
 
     // echo $outString;
+    
+    $grade = 60;
 
 ?>
 <!DOCTYPE html>
 <html>
   <head>
     <title>Results: <?php echo $grade; ?>%</title>
+    
+    <!-- Required meta tags always come first -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+    
+    <style type="text/css">
+      h1{
+        text-align: center;
+      }
+      
+      .jumbotron{
+        padding-top: 10px; 
+        padding-bottom: 5px;
+        
+      }
+      
+      .goodScoreTron{
+        border: 5px solid limegreen;
+      }
+      
+      #gradeDisplay{
+        font-weight: bold;
+      }
+      
+      h4{
+        text-align: center;
+      }
+      
+    </style>
   </head>
   <body>
-    <div id="page">
-      <!-- TITLE -->
-      <h1>Results</h1>
-      <!-- SCORE -->
-      <div id="scoreDisplay">
-        <p><?php echo $grade; ?>%</p>
-        <h2>Your Score</h2>
-      </div>
-      <!--TIME-->
-      <div id="timeDisplay">
-        <h2>Your Time:</h2>
-        <p><?php echo $outString; ?></p>
-      </div>
-      
-      <!-- WHAT YOU KNOW -->
-      <div id="correctList" class="listDiv">
-        <h3>What you know</h3>
-        <ul>
-          <li><a a href="http://www.w3schools.com/html/html_intro.asp" target="_blank">Structure</a></li>
-          <li><a href="http://www.w3schools.com/html/html_formatting.asp" target="_blank">Text</a></li>
-          <li><a href="http://www.w3schools.com/html/html_lists.asp" target="_blank">Lists</a></li>
-          <li><a href="http://www.w3schools.com/html/html_links.asp" target="_blank">Links</a></li>
-          <li><a href="http://www.w3schools.com/html/html_images.asp" target="_blank">Images</a></li>
-          <li><a href="http://www.w3schools.com/html/html_tables.asp" target="_blank">Tables</a></li>
-          <li><a href="http://www.w3schools.com/html/html_forms.asp" target="_blank">Forms</a></li>
-          <li><a href="http://www.w3schools.com/html/html5_audio.asp" target="_blank">Audio</a></li>
-          <li><a href="http://www.w3schools.com/html/html5_video.asp" target="_blank">Video</a></li>
-          <li><a href="http://www.w3schools.com/html/html_blocks.asp" target="_blank">Inline/Block</a></li>
-          <li><a href="http://www.w3schools.com/html/html_attributes.asp" target="_blank">Attributes</a></li>
-          <li><a href="http://www.w3schools.com/html/html_iframe.asp" target="_blank">iFrames</a></li>
-        </ul>
-      <div>
-      
-      <!-- SUBJECT STATS -->
-      <div id="subjectStats">
-        <h3>Stats</h3>
-        <p>Structure: 0% </p>
-        <p>Text: <?php //echo $textScore; ?>0% </p>
-        <p>Lists: <?php //echo $textScore; ?>0% </p>
-        <p>Links: <?php //echo $textScore; ?>0% </p>
-        <p>Images: <?php //echo $textScore; ?>0% </p>
-        <p>Tables: <?php //echo $textScore; ?>0% </p>
-        <p>Forms: <?php //echo $textScore; ?>0% </p>
-        <p>Audio: <?php //echo $textScore; ?>0% </p>
-        <p>Video: <?php //echo $textScore; ?>0% </p>
-        <p>Inline/Block: <?php //echo $textScore; ?>0% </p>
-        <p>Attributes: <?php //echo $textScore; ?>0% </p>
-        <p>iFrames: <?php //echo $textScore; ?>0% </p>
-      </div>    
-        
-      <!-- WHAT YOU DON'T KNOW -->
-      <div id="wrongList" class="listDiv">
-        <h3>What you know</h3>
-        <ul>
-          <li><a a href="http://www.w3schools.com/html/html_intro.asp" target="_blank">Structure</a></li>
-          <li><a href="http://www.w3schools.com/html/html_formatting.asp" target="_blank">Text</a></li>
-          <li><a href="http://www.w3schools.com/html/html_lists.asp" target="_blank">Lists</a></li>
-          <li><a href="http://www.w3schools.com/html/html_links.asp" target="_blank">Links</a></li>
-          <li><a href="http://www.w3schools.com/html/html_images.asp" target="_blank">Images</a></li>
-          <li><a href="http://www.w3schools.com/html/html_tables.asp" target="_blank">Tables</a></li>
-          <li><a href="http://www.w3schools.com/html/html_forms.asp" target="_blank">Forms</a></li>
-          <li><a href="http://www.w3schools.com/html/html5_audio.asp" target="_blank">Audio</a></li>
-          <li><a href="http://www.w3schools.com/html/html5_video.asp" target="_blank">Video</a></li>
-          <li><a href="http://www.w3schools.com/html/html_blocks.asp" target="_blank">Inline/Block</a></li>
-          <li><a href="http://www.w3schools.com/html/html_attributes.asp" target="_blank">Attributes</a></li>
-          <li><a href="http://www.w3schools.com/html/html_iframe.asp" target="_blank">iFrames</a></li>
-        </ul>
-      </div>
-      
     
-      
+    <h1 class="display-3">Results</h1>
+    <div class="container">
+      <div class="jumbotron gootScoreTron">
+        <h1 class="display-1" id="gradeDisplay"> <?php echo $grade; ?>%</h1>
+        <progress class="progress progress-striped progress-success" value="<?php echo $grade; ?>" max="100"></progress>
+        <h4>Time to complete: <?php echo $outString; ?></h2>
+      </div>
     </div>
+    
+    <div class="container">
+      <div class="col-md-4" id="rightList">
+        <h3>What you know</h3>
+        <div class="list-group">
+          <a a href="http://www.w3schools.com/html/html_intro.asp" target="_blank"  class="list-group-item list-group-item-action list-group-item-success">
+            Structure
+            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_formatting.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
+            Text
+            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_lists.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
+            Lists
+            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_links.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
+            Links
+            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_images.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
+            Images
+            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_tables.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
+            Tables
+            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_forms.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
+            Forms
+            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html5_audio.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
+            Audio
+            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html5_video.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
+            Video
+            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_blocks.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
+            Inline/Block
+            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_attributes.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
+            Attributes
+            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_iframe.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
+            iFrames
+            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
+          </a>
+          
+        </div>
+      </div>
+      
+      <div class="col-md-4" id="center">
+        
+      </div>
+      
+      <div class="col-md-4" id="wrongList">
+        <h3>What you don't know</h3>
+        <div class="list-group">
+          <a a href="http://www.w3schools.com/html/html_intro.asp" target="_blank"  class="list-group-item list-group-item-action list-group-item-danger">
+            Structure
+            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_formatting.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
+            Text
+            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_lists.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
+            Lists
+            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_links.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
+            Links
+            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_images.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
+            Images
+            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_tables.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
+            Tables
+            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_forms.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
+            Forms
+            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html5_audio.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
+            Audio
+            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html5_video.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
+            Video
+            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_blocks.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
+            Inline/Block
+            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_attributes.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
+            Attributes
+            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
+          </a>
+          
+          <a href="http://www.w3schools.com/html/html_iframe.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
+            iFrames
+            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
+          </a>
+          
+        </div>
+    </div>
+
+    <!-- jQUERY AND BOOSTRAP SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+  
+    <script type="text/javascript">
+      
+    </script>
   </body>
 
 </html>
