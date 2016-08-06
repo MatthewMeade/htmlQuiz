@@ -51,8 +51,15 @@
 
     $finishTime = round(microtime(true) * 1000);
     $startTime = $_POST["startTime"];
+    
+    if($_POST["startTime"] == null){
+      $grade = 80;
+      $totalTime = 100;
+    }else{
+      $totalTime = ($finishTime - $startTime) / 1000;
+    }
 
-    $totalTime = ($finishTime - $startTime) / 1000;
+    
 
     $outString = "";
 
@@ -90,7 +97,7 @@
 
     // echo $outString;
     
-    $grade = 60;
+    
 
 ?>
 <!DOCTYPE html>
@@ -342,12 +349,14 @@
       var setIntervalID = null;
       
       function ListAnim(list){
+        
         $(list).animate({
           left: "0"
         }, 1000, function(){
           ListElementAnim()
           if(setIntervalID == null){
               setIntervalID = setInterval(ScoreDisplay, 50);
+              
           }
         });
       }
