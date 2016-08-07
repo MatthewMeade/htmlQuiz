@@ -1,0 +1,13 @@
+check
+inlineSelect
+y
+Select all inline elements
+6
+2
+&lt;b&gt;
+&lt;span&gt;
+&lt;input&gt;
+&lt;sub&gt;
+&lt;div&gt;
+&lt;p&gt;
+quit
