@@ -1,22 +1,4 @@
 <?php
-    $emailUsed = false;
-    $email = NULL;
-
-    if($_POST != NULL){
-        if($_POST["userMail"] != NULL){
-            $emailUsed = true;
-            $email = $_POST["userMail"];
-        }
-    }else{
-        // echo "ERROR POST NULL";
-    }
-    
-    
-    if($emailUsed){
-        // echo "Email Sent<br>";
-    }else{
-        // echo "No Email Sent<br>";
-    }
 
     $total = 4;
     $score = 0;
@@ -24,82 +6,73 @@
     $answers = array("b", "a", "c", "b");
     $names = array("htmlTemplate", "bold", "textStyle", "escapeError");
 
-
-    //echo "index // name // answer // correct<br>";
-
     $i = 0;
     foreach($names as $name){
 
         $name = $names[$i];
-        $answer = $_POST[$name];
+        $choice = $_POST[$name];
         $correct = $answers[$i];
 
-        if($answer == $correct){
+        if($choice == $correct){
             $score++;
-
-            // echo $answer." = ".$correct."<br>";
-        }else{
-            // echo $answer." != ".$correct."<br>";
         }
 
-        //echo "$i $name $answer $correct <br>";
+        
         $i++;
     }
 
     $grade = $score/$total * 100;
-    // echo "Score: $score/$total = $grade%<br>";
-
-    $finishTime = round(microtime(true) * 1000);
-    $startTime = $_POST["startTime"];
-    
-    if($_POST["startTime"] == null){
-      $grade = 80;
-      $totalTime = 100;
-    }else{
-      $totalTime = ($finishTime - $startTime) / 1000;
-    }
-
-    
-
-    $outString = "";
-
-    $seconds = $totalTime;
-    $minutes = 0;
-    $hours = 0;
-
-    while($seconds > 60){
-        $minutes++;
-        $seconds -= 60;
-    }
-
-    while($minutes > 60){
-      $hours++;
-      $minutes -= 60;
-    }
-
-    //echo 'Time to complete: ';
-
-    if($hours > 0){
-      //echo $hours."h ";
-      $outString = $outString.$hours."h ";
-    }
-
-    if($minutes > 0){
-      // echo $minutes."m ";
-      $outString = $outString.$minutes."m ";
-    }
-    
-    $outString = $outString.round($seconds, 0, PHP_ROUND_HALF_DOWN)."s";
-
-    // echo floor($seconds)."s<br>";
-
-    // echo "Total in seconds: ".$totalTime."s<br>";
-
-    // echo $outString;
     
     
 
+    /* TIME */
+    $totalTime = GetTotalTime();
+    $timeDisplay = ConvertTime($totalTime);
+
+    
+    
+    function ConvertTime($sec){
+      $minutes = 0;
+      $hours = 0;
+  
+      while($sec > 60){
+          $minutes++;
+          $sec -= 60;
+      }
+  
+      while($minutes > 60){
+        $hours++;
+        $minutes -= 60;
+      }
+  
+      if($hours > 0){
+        $outString = $outString.$hours."h ";
+      }
+  
+      if($minutes > 0){
+        $outString = $outString.$minutes."m ";
+      }
+      
+      $outString = $outString.round($sec, 0, PHP_ROUND_HALF_DOWN)."s";
+  
+      return $outString;
+    }
+    
+    function GetTotalTime(){
+      $finishTime = round(microtime(true) * 1000);
+      $startTime = $_POST["startTime"];
+      
+      if($_POST["startTime"] == null){
+        $totalTime = 100;
+      }else{
+        $totalTime = ($finishTime - $startTime) / 1000;
+      }
+      
+      return $totalTime;
+    }
+    
 ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -179,7 +152,7 @@
       <div class="jumbotron gootScoreTron">
         <h1 class="display-1" id="gradeDisplay">??%</h1>
         <progress class="progress progress-striped progress-success" value="0" max="100"></progress>
-        <h4>Time to complete: <?php echo $outString; ?></h2>
+        <h4>Time to complete: <?php echo $timeDisplay; ?></h2>
       </div>
     </div>
     </span>
@@ -366,7 +339,7 @@
       function ListElementAnim(){
         $(".list-group-item").animate({
           height: "50px", 
-          fontSize: "100%",
+          fontSize: "120%",
           padding: "5px"
         }, 1000, function(){
           
