@@ -1,0 +1,50 @@
+quadImage
+htmlTemplate
+y
+Which is the correct way to start a HTML page?
+
+quadImage
+formGrouping
+y
+Which is the correct HTML for grouping form elements?
+
+quadImage
+correctVideo
+y
+Which displays the video "birds.mp4" with a width of 400px and shows controls?
+
+quadImage
+crazyP
+y
+Which HTML displays the following text: <p class="outputExample">The <b><sup>quick brown <em>fox jumps </b> </sup> overthe </em> lazy <sub>dog while </sub> <ins>The fiveboxing </ins> <sup>wizards jump </sup>quickly</p>
+quit
+
+
+
+imageLeft
+escapeError
+y
+On what line is the mistake? 
+8
+12
+16
+15
+
+imageTop
+textStyle
+n
+What HTML creates the following text: <p class="outputExample"><b>HTML</b> is <ins>the</ins> best language <i>ever</i></p>
+A
+B
+C
+D
+
+textLine
+bold
+y
+Which creates bold text?
+&lt;b&gt;Text&lt;/b&gt; 
+&lt;bold&gt;Text&lt;/bold&gt;
+&lt;p style="bold"&gt;Text&lt;/p&gt;
+&lt;p bold&gt;Text&lt;/p&gt;
+quit

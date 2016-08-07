@@ -24,7 +24,7 @@ imageTop
 [Answer B]
 [Answer C]
 [Answer D]
-
+ 
 imageLeft
 [Question Name]
 [Shuffle y\n]
@@ -33,7 +33,7 @@ imageLeft
 [Answer B]
 [Answer C]
 [Answer D]
-
+  
 quadImage
 [Question Name]
 [Shuffle y\n]

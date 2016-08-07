@@ -1,0 +1,109 @@
+<h2>Question 1</h2>
+<div class='question'>
+	<div class='check mixAns'>
+		<h3>Select all inline elements</h3>
+		<label class='ans'>
+			<input type='checkbox' name='inlineSelect' value='a'>&lt;b&gt;
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='inlineSelect' value='b'>&lt;span&gt;
+		</label><br>
+		<label class='ans'>
+			<input type='checkbox' name='inlineSelect' value='c'>&lt;input&gt;
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='inlineSelect' value='d'>&lt;sub&gt;
+		</label><br>
+		<label class='ans'>
+			<input type='checkbox' name='inlineSelect' value='e'>&lt;div&gt;
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='inlineSelect' value='f'>&lt;p&gt;
+		</label><br>
+	</div>
+</div>
+
+<h2>Question 2</h2>
+<div class='question'>
+	<div class='check mixAns'>
+		<h3>Check all elements that were introduced in HTML5</h3>
+		<label class='ans'>
+			<input type='checkbox' name='newElements' value='a'>&lt;article&gt;
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='newElements' value='b'>&lt;abbr&gt;
+		</label><br>
+		<label class='ans'>
+			<input type='checkbox' name='newElements' value='c'>&lt;thead&gt;
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='newElements' value='d'>&lt;figure&gt;
+		</label><br>
+		<label class='ans'>
+			<input type='checkbox' name='newElements' value='e'>&lt;nav&gt;
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='newElements' value='f'>&lt;strike&gt;
+		</label><br>
+	</div>
+</div>
+
+<h2>Question 3</h2>
+<div class='question'>
+	<div class='check mixAns'>
+		<h3>Check all elements with semantic meaning</h3>
+		<label class='ans'>
+			<input type='checkbox' name='semanticCheck' value='a'>&lt;nav&gt;
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='semanticCheck' value='b'>&lt;div&gt;
+		</label><br>
+		<label class='ans'>
+			<input type='checkbox' name='semanticCheck' value='c'>&lt;span id="nav"&gt;
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='semanticCheck' value='d'>&lt;article&gt;
+		</label><br>
+		<label class='ans'>
+			<input type='checkbox' name='semanticCheck' value='e'>&lt;b&gt;
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='semanticCheck' value='f'>&lt;strong&gt;
+		</label><br>
+	</div>
+</div>
+
+<h2>Question 4</h2>
+<div class='question'>
+	<div class='check mixAns'>
+		<h3>Check all valid values for the type attribute <p class="outputExample">&lt;input type='   ' name='example'...</p></h3>
+		<label class='ans'>
+			<input type='checkbox' name='inputType' value='a'>button
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='inputType' value='b'>check
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='inputType' value='c'>color
+		</label><br>
+		<label class='ans'>
+			<input type='checkbox' name='inputType' value='d'>year
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='inputType' value='e'>file
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='inputType' value='f'>select
+		</label><br>
+		<label class='ans'>
+			<input type='checkbox' name='inputType' value='g'>radio
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='inputType' value='h'>textarea
+		</label>
+		<label class='ans'>
+			<input type='checkbox' name='inputType' value='i'>date
+		</label><br>
+	</div>
+</div>
+

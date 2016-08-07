@@ -1,0 +1,92 @@
+<h2>Question 1</h2>
+<div class='question'>
+	<div class='quadImage mixAns'>
+		<h3>Which is the correct way to start a HTML page?</h3>
+		<label class='optionL ans'>
+			<input type='radio' name='htmlTemplate' value='a' required>
+			<img src='quizSnips/htmlTemplateA.png'>
+		</label>
+		<label class='optionR ans'>
+			<input type='radio' name='htmlTemplate' value='b' required>
+			<img src='quizSnips/htmlTemplateB.png'>
+		</label>
+		<label class='optionL ans'>
+			<input type='radio' name='htmlTemplate' value='c' required>
+			<img src='quizSnips/htmlTemplateC.png'>
+		</label>
+		<label class='optionR ans'>
+			<input type='radio' name='htmlTemplate' value='d' required>
+			<img src='quizSnips/htmlTemplateD.png'>
+		</label>
+	</div>
+</div>
+
+<h2>Question 2</h2>
+<div class='question'>
+	<div class='quadImage mixAns'>
+		<h3>Which is the correct HTML for grouping form elements?</h3>
+		<label class='optionL ans'>
+			<input type='radio' name='formGrouping' value='a' required>
+			<img src='quizSnips/formGroupingA.png'>
+		</label>
+		<label class='optionR ans'>
+			<input type='radio' name='formGrouping' value='b' required>
+			<img src='quizSnips/formGroupingB.png'>
+		</label>
+		<label class='optionL ans'>
+			<input type='radio' name='formGrouping' value='c' required>
+			<img src='quizSnips/formGroupingC.png'>
+		</label>
+		<label class='optionR ans'>
+			<input type='radio' name='formGrouping' value='d' required>
+			<img src='quizSnips/formGroupingD.png'>
+		</label>
+	</div>
+</div>
+
+<h2>Question 3</h2>
+<div class='question'>
+	<div class='quadImage mixAns'>
+		<h3>Which displays the video "birds.mp4" with a width of 400px and shows controls?</h3>
+		<label class='optionL ans'>
+			<input type='radio' name='correctVideo' value='a' required>
+			<img src='quizSnips/correctVideoA.png'>
+		</label>
+		<label class='optionR ans'>
+			<input type='radio' name='correctVideo' value='b' required>
+			<img src='quizSnips/correctVideoB.png'>
+		</label>
+		<label class='optionL ans'>
+			<input type='radio' name='correctVideo' value='c' required>
+			<img src='quizSnips/correctVideoC.png'>
+		</label>
+		<label class='optionR ans'>
+			<input type='radio' name='correctVideo' value='d' required>
+			<img src='quizSnips/correctVideoD.png'>
+		</label>
+	</div>
+</div>
+
+<h2>Question 4</h2>
+<div class='question'>
+	<div class='quadImage mixAns'>
+		<h3>Which HTML displays the following text: <p class="outputExample">The <b><sup>quick brown <em>fox jumps </b> </sup> overthe </em> lazy <sub>dog while </sub> <ins>The fiveboxing </ins> <sup>wizards jump </sup>quickly</p></h3>
+		<label class='optionL ans'>
+			<input type='radio' name='crazyP' value='a' required>
+			<img src='quizSnips/crazyPA.png'>
+		</label>
+		<label class='optionR ans'>
+			<input type='radio' name='crazyP' value='b' required>
+			<img src='quizSnips/crazyPB.png'>
+		</label>
+		<label class='optionL ans'>
+			<input type='radio' name='crazyP' value='c' required>
+			<img src='quizSnips/crazyPC.png'>
+		</label>
+		<label class='optionR ans'>
+			<input type='radio' name='crazyP' value='d' required>
+			<img src='quizSnips/crazyPD.png'>
+		</label>
+	</div>
+</div>
+

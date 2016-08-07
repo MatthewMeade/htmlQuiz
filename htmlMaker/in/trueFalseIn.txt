@@ -2,4 +2,29 @@ trueFalse
 htmlMeaning
 n
 HTML stands for Hyper Text Markup Language
+
+trueFalse
+breakBlock
+n
+The &lt;br&gt; tag is a block level element
+
+trueFalse
+relativeDef
+n
+You use a relative URL to link to different sites
+
+trueFalse
+tableFooter
+n
+When making a table you can give it a footer with &lt;tfooter&gt;
+
+trueFalse
+dropDown
+n
+To create a drop down menu you use the &lt;select&gt; element
+
+trueFalse
+videoAtt
+n
+'poster' is a valid attribute for the &lt;video&gt; element
 quit

@@ -1,0 +1,78 @@
+<h2>Question 1</h2>
+<div class='question'>
+	<div class='trueFalse '>
+		<h3>HTML stands for Hyper Text Markup Language</h3>
+		<label class='ans'>
+			<input type='radio' name='htmlMeaning' value='a' required> True
+		</label>
+		<label class='ans'>
+			<input type='radio' name='htmlMeaning' value='b' required> False
+		</label>
+	</div>
+</div>
+
+<h2>Question 2</h2>
+<div class='question'>
+	<div class='trueFalse '>
+		<h3>The &lt;br&gt; tag is a block level element</h3>
+		<label class='ans'>
+			<input type='radio' name='breakBlock' value='a' required> True
+		</label>
+		<label class='ans'>
+			<input type='radio' name='breakBlock' value='b' required> False
+		</label>
+	</div>
+</div>
+
+<h2>Question 3</h2>
+<div class='question'>
+	<div class='trueFalse '>
+		<h3>You use a relative URL to link to different sites</h3>
+		<label class='ans'>
+			<input type='radio' name='relativeDef' value='a' required> True
+		</label>
+		<label class='ans'>
+			<input type='radio' name='relativeDef' value='b' required> False
+		</label>
+	</div>
+</div>
+
+<h2>Question 4</h2>
+<div class='question'>
+	<div class='trueFalse '>
+		<h3>When making a table you can give it a footer with &lt;tfooter&gt;</h3>
+		<label class='ans'>
+			<input type='radio' name='tableFooter' value='a' required> True
+		</label>
+		<label class='ans'>
+			<input type='radio' name='tableFooter' value='b' required> False
+		</label>
+	</div>
+</div>
+
+<h2>Question 5</h2>
+<div class='question'>
+	<div class='trueFalse '>
+		<h3>To create a drop down menu you use the &lt;select&gt; element</h3>
+		<label class='ans'>
+			<input type='radio' name='dropDown' value='a' required> True
+		</label>
+		<label class='ans'>
+			<input type='radio' name='dropDown' value='b' required> False
+		</label>
+	</div>
+</div>
+
+<h2>Question 6</h2>
+<div class='question'>
+	<div class='trueFalse '>
+		<h3>'poster' is a valid attribute for the &lt;video&gt; element</h3>
+		<label class='ans'>
+			<input type='radio' name='videoAtt' value='a' required> True
+		</label>
+		<label class='ans'>
+			<input type='radio' name='videoAtt' value='b' required> False
+		</label>
+	</div>
+</div>
+
