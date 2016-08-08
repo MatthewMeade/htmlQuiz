@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz</title>
+
+    <meta charset="utf-8"/>
+
+    <link type="text/css" rel="stylesheet" href="styles/emailPage.css">
+    <link type="text/css" rel="stylesheet" href="styles/form.css">
+    <link type="text/css" rel="stylesheet" href="styles/page.css">
+    <link type="text/css" rel="stylesheet" href="styles/img.css">
+
+    <style type="text/css"> 
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="page">
+        
+        
+        
+        <h1 id="title">HTML Quiz</h1>
+        <div id="emailRequest">
+            <p>This is a simple HTML quiz testing basic knowelege of the language</p>
+            <p>If you would like the results sent to you by email, enter it below!</p>
+            <input type="email" name="userMail" placeholder="example@example.com" id="emailPrompt" form="quiz">
+            <div id="emailButtons">
+                <button id="yesEmail">Send me the email</button>
+                <button id="noEmail">Continue without email</button>
+            </div>
+            <p id="emailWarning" class="hidden">Invalid Email</p>
+        </div>
+        <div id="quizDiv" class="hidden">
+            <div id="backToTopLink"><a href="#title">Back to top</a></div>
+            <form id="quiz" action="submit.php" method="post">
+              
+            <div id="questions">
+              <h2>Question 1</h2>
+              <div class='question'>
+              	<div class='imageTop '>
+              		<h3>What HTML creates the following text: <p class="outputExample"><b>HTML</b> is <ins>the</ins> best language <i>ever</i></p></h3>
+              		<img src='quizSnips/textStyle.png'>
+              		<label class='ans'>
+              			<input type='radio' name='textStyle' value='a' required> A
+              		</label>
+
+              		<label class='ans'>
+              			<input type='radio' name='textStyle' value='b' required> B
+              		</label>
+
+              		<label class='ans'>
+              			<input type='radio' name='textStyle' value='c' required> C
+              		</label>
+
+              		<label class='ans'>
+              			<input type='radio' name='textStyle' value='d' required> D
+              		</label>
+
+              	</div>
+              </div>
+
+              <h2>Question 2</h2>
+              <div class='question'>
+              	<div class='imageTop '>
+              		<h3>Which form is valid and sends the variables in the url?</h3>
+              		<img src='quizSnips/formMethod.png'>
+              		<label class='ans'>
+              			<input type='radio' name='formMethod' value='a' required> A
+              		</label>
+
+              		<label class='ans'>
+              			<input type='radio' name='formMethod' value='b' required> B
+              		</label>
+
+              		<label class='ans'>
+              			<input type='radio' name='formMethod' value='c' required> C
+              		</label>
+
+              		<label class='ans'>
+              			<input type='radio' name='formMethod' value='d' required> D
+              		</label>
+
+              	</div>
+              </div>
+
+              <h2>Question 3</h2>
+              <div class='question'>
+              	<div class='imageTop mixAns'>
+              		<h3>What is the missing element that applies a caption to the image?</h3>
+              		<img src='quizSnips/imgCaption.png'>
+              		<label class='ans'>
+              			<input type='radio' name='imgCaption' value='a' required> &lt;caption&gt;
+              		</label>
+
+              		<label class='ans'>
+              			<input type='radio' name='imgCaption' value='b' required> &lt;figcaption&gt;
+              		</label>
+
+              		<label class='ans'>
+              			<input type='radio' name='imgCaption' value='c' required> &lt;label&gt;
+              		</label>
+
+              		<label class='ans'>
+              			<input type='radio' name='imgCaption' value='d' required> &lt;legend&gt;
+              		</label>
+
+              	</div>
+              </div>
+
+              <h2>Question 4</h2>
+              <div class='question'>
+              	<div class='imageLeft mixAns'>
+              		<h3>On what line is the mistake? </h3>
+              		<img src='quizSnips/escapeError.png'>
+              		<label class='ans'>
+              			<input type='radio' name='escapeError' value='a' required> 8
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='escapeError' value='b' required> 12
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='escapeError' value='c' required> 16
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='escapeError' value='d' required> 15
+              		</label>
+               		<br>
+              	</div>
+              </div>
+
+              <h2>Question 5</h2>
+              <div class='question'>
+              	<div class='textLine mixAns'>
+              		<h3>Which creates bold text?</h3>
+              		<label class='ans'>
+              			<input type='radio' name='bold' value='a' required> &lt;b&gt;Text&lt;/b&gt; 
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='bold' value='b' required> &lt;bold&gt;Text&lt;/bold&gt;
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='bold' value='c' required> &lt;p style="bold"&gt;Text&lt;/p&gt;
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='bold' value='d' required> &lt;p bold&gt;Text&lt;/p&gt;
+              		</label>
+               		<br>
+              	</div>
+              </div>
+
+              <h2>Question 6</h2>
+              <div class='question'>
+              	<div class='textLine mixAns'>
+              		<h3>What does the &lt;fieldset&gt; element used for? </h3>
+              		<label class='ans'>
+              			<input type='radio' name='fieldset' value='a' required> To create a form
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='fieldset' value='b' required> To group several controls and labels together
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='fieldset' value='c' required> To provide a caption to a form group
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='fieldset' value='d' required> To create interactive controls
+              		</label>
+               		<br>
+              	</div>
+              </div>
+
+              <h2>Question 7</h2>
+              <div class='question'>
+              	<div class='textLine mixAns'>
+              		<h3>Which element represents a text that has been deleted from a document?</h3>
+              		<label class='ans'>
+              			<input type='radio' name='deletedText' value='a' required> &lt;deleted&gt;
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='deletedText' value='b' required> &lt;removed&gt;
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='deletedText' value='c' required> &lt;del&gt;
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='deletedText' value='d' required> &lt;rem&gt;
+              		</label>
+               		<br>
+              	</div>
+              </div>
+
+              <h2>Question 8</h2>
+              <div class='question'>
+              	<div class='textLine mixAns'>
+              		<h3>Which element does not belong?</h3>
+              		<label class='ans'>
+              			<input type='radio' name='teletype' value='a' required> &lt;th&gt;
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='teletype' value='b' required> &lt;td&gt;
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='teletype' value='c' required> &lt;tr&gt;
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='teletype' value='d' required> &lt;tt&gt;
+              		</label>
+               		<br>
+              	</div>
+              </div>
+
+              <h2>Question 9</h2>
+              <div class='question'>
+              	<div class='textLine mixAns'>
+              		<h3>What element do you use to write javascript that will be run un the browser?</h3>
+              		<label class='ans'>
+              			<input type='radio' name='scriptElement' value='a' required> &lt;code&gt;
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='scriptElement' value='b' required> &lt;script&gt;
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='scriptElement' value='c' required> &lt;link&gt;
+              		</label>
+               		<br>
+              		<label class='ans'>
+              			<input type='radio' name='scriptElement' value='d' required> &lt;js&gt;
+              		</label>
+               		<br>
+              	</div>
+              </div>
+
+              <h2>Question 10</h2>
+              <div class='question'>
+              	<div class='quadImage mixAns'>
+              		<h3>Which is the correct way to start a HTML page?</h3>
+              		<label class='optionL ans'>
+              			<input type='radio' name='htmlTemplate' value='a' required>
+              			<img src='quizSnips/htmlTemplateA.png'>
+              		</label>
+              		<label class='optionR ans'>
+              			<input type='radio' name='htmlTemplate' value='b' required>
+              			<img src='quizSnips/htmlTemplateB.png'>
+              		</label>
+              		<label class='optionL ans'>
+              			<input type='radio' name='htmlTemplate' value='c' required>
+              			<img src='quizSnips/htmlTemplateC.png'>
+              		</label>
+              		<label class='optionR ans'>
+              			<input type='radio' name='htmlTemplate' value='d' required>
+              			<img src='quizSnips/htmlTemplateD.png'>
+              		</label>
+              	</div>
+              </div>
+
+              <h2>Question 11</h2>
+              <div class='question'>
+              	<div class='quadImage mixAns'>
+              		<h3>Which is the correct HTML for grouping form elements?</h3>
+              		<label class='optionL ans'>
+              			<input type='radio' name='formGrouping' value='a' required>
+              			<img src='quizSnips/formGroupingA.png'>
+              		</label>
+              		<label class='optionR ans'>
+              			<input type='radio' name='formGrouping' value='b' required>
+              			<img src='quizSnips/formGroupingB.png'>
+              		</label>
+              		<label class='optionL ans'>
+              			<input type='radio' name='formGrouping' value='c' required>
+              			<img src='quizSnips/formGroupingC.png'>
+              		</label>
+              		<label class='optionR ans'>
+              			<input type='radio' name='formGrouping' value='d' required>
+              			<img src='quizSnips/formGroupingD.png'>
+              		</label>
+              	</div>
+              </div>
+
+              <h2>Question 12</h2>
+              <div class='question'>
+              	<div class='quadImage mixAns'>
+              		<h3>Which displays the video "birds.mp4" with a width of 400px and shows controls?</h3>
+              		<label class='optionL ans'>
+              			<input type='radio' name='correctVideo' value='a' required>
+              			<img src='quizSnips/correctVideoA.png'>
+              		</label>
+              		<label class='optionR ans'>
+              			<input type='radio' name='correctVideo' value='b' required>
+              			<img src='quizSnips/correctVideoB.png'>
+              		</label>
+              		<label class='optionL ans'>
+              			<input type='radio' name='correctVideo' value='c' required>
+              			<img src='quizSnips/correctVideoC.png'>
+              		</label>
+              		<label class='optionR ans'>
+              			<input type='radio' name='correctVideo' value='d' required>
+              			<img src='quizSnips/correctVideoD.png'>
+              		</label>
+              	</div>
+              </div>
+
+              <h2>Question 14</h2>
+              <div class='question'>
+              	<div class='trueFalse '>
+              		<h3>HTML stands for Hyper Text Markup Language</h3>
+              		<label class='ans'>
+              			<input type='radio' name='htmlMeaning' value='a' required> True
+              		</label>
+              		<label class='ans'>
+              			<input type='radio' name='htmlMeaning' value='b' required> False
+              		</label>
+              	</div>
+              </div>
+
+              <h2>Question 15</h2>
+              <div class='question'>
+              	<div class='trueFalse '>
+              		<h3>The &lt;br&gt; tag is a block level element</h3>
+              		<label class='ans'>
+              			<input type='radio' name='breakBlock' value='a' required> True
+              		</label>
+              		<label class='ans'>
+              			<input type='radio' name='breakBlock' value='b' required> False
+              		</label>
+              	</div>
+              </div>
+
+              <h2>Question 16</h2>
+              <div class='question'>
+              	<div class='trueFalse '>
+              		<h3>You use a relative URL to link to different sites</h3>
+              		<label class='ans'>
+              			<input type='radio' name='relativeDef' value='a' required> True
+              		</label>
+              		<label class='ans'>
+              			<input type='radio' name='relativeDef' value='b' required> False
+              		</label>
+              	</div>
+              </div>
+
+              <h2>Question 17</h2>
+              <div class='question'>
+              	<div class='trueFalse '>
+              		<h3>When making a table you can give it a footer with &lt;tfooter&gt;</h3>
+              		<label class='ans'>
+              			<input type='radio' name='tableFooter' value='a' required> True
+              		</label>
+              		<label class='ans'>
+              			<input type='radio' name='tableFooter' value='b' required> False
+              		</label>
+              	</div>
+              </div>
+
+              <h2>Question 18</h2>
+              <div class='question'>
+              	<div class='trueFalse '>
+              		<h3>To create a drop down menu you use the &lt;select&gt; element</h3>
+              		<label class='ans'>
+              			<input type='radio' name='dropDown' value='a' required> True
+              		</label>
+              		<label class='ans'>
+              			<input type='radio' name='dropDown' value='b' required> False
+              		</label>
+              	</div>
+              </div>
+
+              <h2>Question 19</h2>
+              <div class='question'>
+              	<div class='trueFalse '>
+              		<h3>'poster' is a valid attribute for the &lt;video&gt; element</h3>
+              		<label class='ans'>
+              			<input type='radio' name='videoAtt' value='a' required> True
+              		</label>
+              		<label class='ans'>
+              			<input type='radio' name='videoAtt' value='b' required> False
+              		</label>
+              	</div>
+              </div>
+
+              <h2>Question 20</h2>
+              <div class='question'>
+              	<div class='check mixAns'>
+              		<h3>Select all inline elements</h3>
+              		<label class='ans'>
+              			<input type='checkbox' name='inlineSelect' value='a'>&lt;b&gt;
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='inlineSelect' value='b'>&lt;span&gt;
+              		</label><br>
+              		<label class='ans'>
+              			<input type='checkbox' name='inlineSelect' value='c'>&lt;input&gt;
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='inlineSelect' value='d'>&lt;sub&gt;
+              		</label><br>
+              		<label class='ans'>
+              			<input type='checkbox' name='inlineSelect' value='e'>&lt;div&gt;
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='inlineSelect' value='f'>&lt;p&gt;
+              		</label><br>
+              	</div>
+              </div>
+
+              <h2>Question 21</h2>
+              <div class='question'>
+              	<div class='check mixAns'>
+              		<h3>Check all elements that were introduced in HTML5</h3>
+              		<label class='ans'>
+              			<input type='checkbox' name='newElements' value='a'>&lt;article&gt;
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='newElements' value='b'>&lt;abbr&gt;
+              		</label><br>
+              		<label class='ans'>
+              			<input type='checkbox' name='newElements' value='c'>&lt;thead&gt;
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='newElements' value='d'>&lt;figure&gt;
+              		</label><br>
+              		<label class='ans'>
+              			<input type='checkbox' name='newElements' value='e'>&lt;nav&gt;
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='newElements' value='f'>&lt;strike&gt;
+              		</label><br>
+              	</div>
+              </div>
+
+              <h2>Question 22</h2>
+              <div class='question'>
+              	<div class='check mixAns'>
+              		<h3>Check all elements with semantic meaning</h3>
+              		<label class='ans'>
+              			<input type='checkbox' name='semanticCheck' value='a'>&lt;nav&gt;
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='semanticCheck' value='b'>&lt;div&gt;
+              		</label><br>
+              		<label class='ans'>
+              			<input type='checkbox' name='semanticCheck' value='c'>&lt;span id="nav"&gt;
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='semanticCheck' value='d'>&lt;article&gt;
+              		</label><br>
+              		<label class='ans'>
+              			<input type='checkbox' name='semanticCheck' value='e'>&lt;b&gt;
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='semanticCheck' value='f'>&lt;strong&gt;
+              		</label><br>
+              	</div>
+              </div>
+
+              <h2>Question 23</h2>
+              <div class='question'>
+              	<div class='check mixAns'>
+              		<h3>Check all valid values for the type attribute <p class="outputExample">&lt;input type='   ' name='example'...</p></h3>
+              		<label class='ans'>
+              			<input type='checkbox' name='inputType' value='a'>button
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='inputType' value='b'>check
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='inputType' value='c'>color
+              		</label><br>
+              		<label class='ans'>
+              			<input type='checkbox' name='inputType' value='d'>year
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='inputType' value='e'>file
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='inputType' value='f'>select
+              		</label><br>
+              		<label class='ans'>
+              			<input type='checkbox' name='inputType' value='g'>radio
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='inputType' value='h'>textarea
+              		</label>
+              		<label class='ans'>
+              			<input type='checkbox' name='inputType' value='i'>date
+              		</label><br>
+              	</div>
+              </div>
+
+
+              
+            </div>
+
+
+
+            <h2>Done?</h2>
+            <input type="submit" value="Submit Answers" id="submitButton">
+
+            <input type="hidden" name="startTime" value="" id="startTime">
+            </form>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="scripts/shuffle.js"></script>
+    <script type="text/javascript" src="scripts/start.js"></script>
+
+    <script type="text/javascript">
+
+    </script>
+
+</body>
+
+</html>
