@@ -1,92 +1,115 @@
 <h2>Question 1</h2>
 <div class='question'>
-	<div class='quadImage mixAns'>
-		<h3>Which is the correct way to start a HTML page?</h3>
-		<label class='optionL ans'>
-			<input type='radio' name='htmlTemplate' value='a' required>
-			<img src='quizSnips/htmlTemplateA.png'>
+	<div class='textLine mixAns'>
+		<h3>Which creates bold text?</h3>
+		<label class='ans'>
+			<input type='radio' name='bold' value='a' required> &lt;b&gt;Text&lt;/b&gt; 
 		</label>
-		<label class='optionR ans'>
-			<input type='radio' name='htmlTemplate' value='b' required>
-			<img src='quizSnips/htmlTemplateB.png'>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='bold' value='b' required> &lt;bold&gt;Text&lt;/bold&gt;
 		</label>
-		<label class='optionL ans'>
-			<input type='radio' name='htmlTemplate' value='c' required>
-			<img src='quizSnips/htmlTemplateC.png'>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='bold' value='c' required> &lt;p style="bold"&gt;Text&lt;/p&gt;
 		</label>
-		<label class='optionR ans'>
-			<input type='radio' name='htmlTemplate' value='d' required>
-			<img src='quizSnips/htmlTemplateD.png'>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='bold' value='d' required> &lt;p bold&gt;Text&lt;/p&gt;
 		</label>
+ 		<br>
 	</div>
 </div>
 
 <h2>Question 2</h2>
 <div class='question'>
-	<div class='quadImage mixAns'>
-		<h3>Which is the correct HTML for grouping form elements?</h3>
-		<label class='optionL ans'>
-			<input type='radio' name='formGrouping' value='a' required>
-			<img src='quizSnips/formGroupingA.png'>
+	<div class='textLine mixAns'>
+		<h3>What does the &lt;fieldset&gt; element used for? </h3>
+		<label class='ans'>
+			<input type='radio' name='fieldset' value='a' required> To create a form
 		</label>
-		<label class='optionR ans'>
-			<input type='radio' name='formGrouping' value='b' required>
-			<img src='quizSnips/formGroupingB.png'>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='fieldset' value='b' required> To group several controls and labels together
 		</label>
-		<label class='optionL ans'>
-			<input type='radio' name='formGrouping' value='c' required>
-			<img src='quizSnips/formGroupingC.png'>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='fieldset' value='c' required> To provide a caption to a form group
 		</label>
-		<label class='optionR ans'>
-			<input type='radio' name='formGrouping' value='d' required>
-			<img src='quizSnips/formGroupingD.png'>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='fieldset' value='d' required> To create interactive controls
 		</label>
+ 		<br>
 	</div>
 </div>
 
 <h2>Question 3</h2>
 <div class='question'>
-	<div class='quadImage mixAns'>
-		<h3>Which displays the video "birds.mp4" with a width of 400px and shows controls?</h3>
-		<label class='optionL ans'>
-			<input type='radio' name='correctVideo' value='a' required>
-			<img src='quizSnips/correctVideoA.png'>
+	<div class='textLine mixAns'>
+		<h3>Which element represents a text that has been deleted from a document?</h3>
+		<label class='ans'>
+			<input type='radio' name='deletedText' value='a' required> &lt;deleted&gt;
 		</label>
-		<label class='optionR ans'>
-			<input type='radio' name='correctVideo' value='b' required>
-			<img src='quizSnips/correctVideoB.png'>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='deletedText' value='b' required> &lt;removed&gt;
 		</label>
-		<label class='optionL ans'>
-			<input type='radio' name='correctVideo' value='c' required>
-			<img src='quizSnips/correctVideoC.png'>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='deletedText' value='c' required> &lt;del&gt;
 		</label>
-		<label class='optionR ans'>
-			<input type='radio' name='correctVideo' value='d' required>
-			<img src='quizSnips/correctVideoD.png'>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='deletedText' value='d' required> &lt;rem&gt;
 		</label>
+ 		<br>
 	</div>
 </div>
 
 <h2>Question 4</h2>
 <div class='question'>
-	<div class='quadImage mixAns'>
-		<h3>Which HTML displays the following text: <p class="outputExample">The <b><sup>quick brown <em>fox jumps </b> </sup> overthe </em> lazy <sub>dog while </sub> <ins>The fiveboxing </ins> <sup>wizards jump </sup>quickly</p></h3>
-		<label class='optionL ans'>
-			<input type='radio' name='crazyP' value='a' required>
-			<img src='quizSnips/crazyPA.png'>
+	<div class='textLine mixAns'>
+		<h3>Which element does not belong?</h3>
+		<label class='ans'>
+			<input type='radio' name='teletype' value='a' required> &lt;th&gt;
 		</label>
-		<label class='optionR ans'>
-			<input type='radio' name='crazyP' value='b' required>
-			<img src='quizSnips/crazyPB.png'>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='teletype' value='b' required> &lt;td&gt;
 		</label>
-		<label class='optionL ans'>
-			<input type='radio' name='crazyP' value='c' required>
-			<img src='quizSnips/crazyPC.png'>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='teletype' value='c' required> &lt;tr&gt;
 		</label>
-		<label class='optionR ans'>
-			<input type='radio' name='crazyP' value='d' required>
-			<img src='quizSnips/crazyPD.png'>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='teletype' value='d' required> &lt;tt&gt;
 		</label>
+ 		<br>
+	</div>
+</div>
+
+<h2>Question 5</h2>
+<div class='question'>
+	<div class='textLine mixAns'>
+		<h3>What element do you use to write javascript that will be run un the browser?</h3>
+		<label class='ans'>
+			<input type='radio' name='scriptElement' value='a' required> &lt;code&gt;
+		</label>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='scriptElement' value='b' required> &lt;script&gt;
+		</label>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='scriptElement' value='c' required> &lt;link&gt;
+		</label>
+ 		<br>
+		<label class='ans'>
+			<input type='radio' name='scriptElement' value='d' required> &lt;js&gt;
+		</label>
+ 		<br>
 	</div>
 </div>
 

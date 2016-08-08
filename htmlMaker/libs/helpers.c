@@ -54,7 +54,7 @@ void PrintContents(){
                     textLine(true);
                     break;
                 case 1:
-                    textLine(false);
+                    textLine(true);
                     break;
                 case 2:
                     image(false);

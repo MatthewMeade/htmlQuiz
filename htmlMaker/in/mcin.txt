@@ -1,3 +1,49 @@
+textLine
+bold
+y
+Which creates bold text?
+&lt;b&gt;Text&lt;/b&gt; 
+&lt;bold&gt;Text&lt;/bold&gt;
+&lt;p style="bold"&gt;Text&lt;/p&gt;
+&lt;p bold&gt;Text&lt;/p&gt;
+
+textLine
+fieldset
+y
+What does the &lt;fieldset&gt; element used for? 
+To create a form
+To group several controls and labels together
+To provide a caption to a form group
+To create interactive controls
+
+textLine
+deletedText
+y
+Which element represents a text that has been deleted from a document?
+&lt;deleted&gt;
+&lt;removed&gt;
+&lt;del&gt;
+&lt;rem&gt;
+
+textLine
+teletype
+y
+Which element does not belong?
+&lt;th&gt;
+&lt;td&gt;
+&lt;tr&gt;
+&lt;tt&gt;
+
+textLine
+scriptElement
+y
+What element do you use to write javascript that will be run un the browser?
+&lt;code&gt;
+&lt;script&gt;
+&lt;link&gt;
+&lt;js&gt;
+quit
+
 quadImage
 htmlTemplate
 y
@@ -17,9 +63,6 @@ quadImage
 crazyP
 y
 Which HTML displays the following text: <p class="outputExample">The <b><sup>quick brown <em>fox jumps </b> </sup> overthe </em> lazy <sub>dog while </sub> <ins>The fiveboxing </ins> <sup>wizards jump </sup>quickly</p>
-quit
-
-
 
 imageLeft
 escapeError
@@ -39,12 +82,4 @@ B
 C
 D
 
-textLine
-bold
-y
-Which creates bold text?
-&lt;b&gt;Text&lt;/b&gt; 
-&lt;bold&gt;Text&lt;/bold&gt;
-&lt;p style="bold"&gt;Text&lt;/p&gt;
-&lt;p bold&gt;Text&lt;/p&gt;
-quit
+
