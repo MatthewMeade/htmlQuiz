@@ -1,48 +1,42 @@
-var yesButton = document.getElementById("yesEmail");
-var noButton = document.getElementById("noEmail");
-var userEmail = "";
-var warning = document.getElementById("emailWarning");
-var startPage = document.getElementById("emailRequest");
+var button = document.getElementById("startButton");
+var startPage = document.getElementById("jumbo");
 var quizPage = document.getElementById("quizDiv");
-var form = document.getElementById("quiz");
 
-noButton.onclick = function () {
-    document.getElementById("emailPrompt").value = null;
+button.onclick = function () {
     StartQuiz();
 };
-yesButton.onclick = function () {
-    var userEmail = document.getElementById("emailPrompt").value;
-    if (isEmail(userEmail) == false) {
-        warning.className = "";
-    }
-    else {
-        StartQuiz();
-    }
-}
-
-
-
-
 
 function StartQuiz() {
-    quizDiv.className = "";
-    startPage.className = "hidden";
+  
+    $(startPage).animate({
+      top: "-1000px"
+    }, 1000, function(){
+      $(startPage).css("display", "none");
+      AnimQuiz();
+      AnimNav();
+    });
 
-    var startTime = Date.now();
-    document.getElementById("startTime").value = startTime;
-
-    var quizHeight = document.getElementById("quiz").clientHeight;
-    var page =  document.getElementById("page");
-    var pageHeight = page.style.height;
-
-
-
-    page.style.height = (quizHeight + 200).toString() + "px";
-
-
+    
 }
 
-function isEmail(email) {
-    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    return regex.test(email);
+function AnimNav(){
+    $(".navbar-fixed-top").animate({
+      top: "0px"
+    }, 2000);
 }
+
+function AnimQuiz(){
+  $(quizPage).toggleClass("hidden");
+  $(quizPage).animate({
+    top: ($("nav").outerHeight() + 10) + "px"
+  }, 1500, function(){
+    StartTimer();
+  });
+}
+
+function StartTimer(){
+  var startTime = Date.now();
+  document.getElementById("startTime").value = startTime;
+}
+
+
