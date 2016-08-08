@@ -34,9 +34,18 @@ function AnimQuiz(){
   });
 }
 
+
 function StartTimer(){
-  var startTime = Date.now();
-  document.getElementById("startTime").value = startTime;
+  AnimTimer()
+  var currentTime = Date.now();
+  document.getElementById("startTime").value = currentTime;
+  setInterval(TimerDisplay, 1000)
+}
+
+function AnimTimer(){
+  $("#timeDisplay").animate({
+    right: "5px"
+  }, 2000);
 }
 
 

@@ -67,49 +67,17 @@
       padding-right: 50px;
     }
     
-    #progDiv{
-      float: right;
-      width: 70%;
-      /*border: 1px solid red;*/
-      height: 20px;
-      padding: 0;
-      padding-top: 5px;
-      }
     
-    #prog{
-      width: 50%;
-      float: right;
-      padding-top: 6px;
-      padding-right: 15%;
-      /*border: 1px solid blue;*/
-    }
-    
-    #progLabel{
-      float: left;
-      text-align: right;
-      /*border: 1px solid red;*/
-      width: 29%;
-      padding-right: 5px;
-      /*border: 1px solid green;*/
-    }
     
     #timeDisplay{
       position: fixed;
-      width: 150px;
-      bottom: 10px;
-      right: 10px;
+      right: -200px;
+      bottom: 0px;
       text-align: center;
-      height: 125px;
     }
     
     .card-block{
       padding: 0;
-    }
-    
-    .card-title{
-      margin-top: 5px;
-      margin-bottom: 0;
-      padding-bottom: 0;
     }
     
     .card-text{
@@ -118,12 +86,67 @@
       font-size: 150%;
     }
     
+    @media only screen and (max-width: 530px) {
+        .nav{
+          display: none;
+        }       
+        
+    }
+    
+    @media only screen and (max-width: 1000px) {
+        #progLabel{
+          display: none;
+        }        
+        
+    }
+    
+    
+    @media only screen and (min-width: 1000px) {
+        #progDiv{
+          float: right;
+          width: 70%;
+          /*border: 1px solid red;*/
+          height: 20px;
+          padding: 0;
+          padding-top: 5px;
+          }
+        
+        #prog{
+          width: 50%;
+          float: right;
+          padding-top: 6px;
+          padding-right: 15%;
+          /*border: 1px solid blue;*/
+        }
+        
+        #progLabel{
+          float: left;
+          text-align: right;
+          width: 29%;
+          padding-right: 5px;
+          /*border: 1px solid green;*/
+        }
+    }
+    
+    #navContent{
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) and (max-width: 1000px){
+      #prog{
+        padding-top: 50px;
+      }
+    }
+    
+
 
     </style>
   </head>
   <body>
     
     <nav class="navbar navbar-fixed-top navbar-light bg-faded"> 
+      <div id="navContent">
         <a class="navbar-brand" href="#"><?php echo $title; ?></a>
         <ul class="nav navbar-nav">
             <?php echo $groupsOut ?>
@@ -135,6 +158,7 @@
             <progress class="progress progress-striped progress-animated active" value="10" max="100"></progress>
           </div>
         </div>
+      </div>
     </nav>
   
   <div class="container">
@@ -163,8 +187,7 @@
   
   <div class="card" id="timeDisplay">
     <div class="card-block">
-    <h4 class="card-title">Time:</h4> <hr>
-    <p class="card-text">6h 32m 12s</p>
+    <p class="card-text">0s</p>
   </div>
   </div>
 
@@ -177,7 +200,31 @@
   <script type="text/javascript" src="scripts/start.js"></script>
   
   <script type="text/javascript">
-
+  
+    var totalSeconds = 0;
+    
+    function TimerDisplay(){
+      totalSeconds++;
+      $(".card-text").html(SecondsToString());
+    }
+    
+    function SecondsToString(){
+      hours = Math.floor(totalSeconds / 3600);
+      totalSeconds %= 3600;
+      minutes = Math.floor(totalSeconds / 60);
+      seconds = totalSeconds % 60;
+      
+      
+      if(seconds < 60){
+        return seconds + "s";
+      }
+      
+      if(minutes > 0){
+        return minutes + "m " + seconds + "s";
+      }
+      
+      return "" + hours + "h " + minutes + "m " + seconds + "s";
+    }
   
   </script>
   </body>
