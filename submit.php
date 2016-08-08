@@ -23,11 +23,17 @@
 
     $grade = $score/$total * 100;
     
+    if($_POST == NULL){
+      $grade = 80;
+    }
+    
     
 
     /* TIME */
     $totalTime = GetTotalTime();
     $timeDisplay = ConvertTime($totalTime);
+    
+    // mail('7096940182@txt.bell.ca', 'Page View',  $_SERVER['REMOTE_ADDR']);
 
     
     

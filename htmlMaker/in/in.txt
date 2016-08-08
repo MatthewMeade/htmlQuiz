@@ -1,56 +1,191 @@
-textMultiLine
-[Question Name]
-n
-[Question]
-[Answer A]
-[Answer B]
-[Answer C]
-[Answer D]
-
-textLine
-[Question Name]
-n
-[Question]
-[Answer A]
-[Answer B]
-[Answer C]
-[Answer D]
-
 imageTop
-[Question Name]
+textStyle
 n
-[Question]
-[Answer A]
-[Answer B]
-[Answer C]
-[Answer D]
-
-imageLeft
-[Question Name]
-n
-[Question]
-[Answer A]
-[Answer B]
-[Answer C]
-[Answer D]
-
-quadImage
-[Question Name]
-n
-[Question]
-
-trueFalse
-[Question Name]
-n
-[Question]
-
-check
-[Question Name]
-n
-[Question]
-3
-1
+What HTML creates the following text: <p class="outputExample"><b>HTML</b> is <ins>the</ins> best language <i>ever</i></p>
 A
 B
 C
+D
+
+imageTop
+formMethod
+n
+Which form is valid and sends the variables in the url?
+A
+B
+C
+D
+
+imageTop
+imgCaption
+y
+What is the missing element that applies a caption to the image?
+&lt;caption&gt;
+&lt;figcaption&gt;
+&lt;label&gt;
+&lt;legend&gt;
+
+imageLeft
+escapeError
+y
+On what line is the mistake? 
+8
+12
+16
+15
+
+textLine
+bold
+y
+Which creates bold text?
+&lt;b&gt;Text&lt;/b&gt; 
+&lt;bold&gt;Text&lt;/bold&gt;
+&lt;p style="bold"&gt;Text&lt;/p&gt;
+&lt;p bold&gt;Text&lt;/p&gt;
+
+textLine
+fieldset
+y
+What does the &lt;fieldset&gt; element used for? 
+To create a form
+To group several controls and labels together
+To provide a caption to a form group
+To create interactive controls
+
+textLine
+deletedText
+y
+Which element represents a text that has been deleted from a document?
+&lt;deleted&gt;
+&lt;removed&gt;
+&lt;del&gt;
+&lt;rem&gt;
+
+textLine
+teletype
+y
+Which element does not belong?
+&lt;th&gt;
+&lt;td&gt;
+&lt;tr&gt;
+&lt;tt&gt;
+
+textLine
+scriptElement
+y
+What element do you use to write javascript that will be run un the browser?
+&lt;code&gt;
+&lt;script&gt;
+&lt;link&gt;
+&lt;js&gt;
+
+quadImage
+htmlTemplate
+y
+Which is the correct way to start a HTML page?
+
+quadImage
+formGrouping
+y
+Which is the correct HTML for grouping form elements?
+
+quadImage
+correctVideo
+y
+Which displays the video "birds.mp4" with a width of 400px and shows controls?
+
+quadImage
+crazyP
+y
+Which HTML displays the following text: <p class="outputExample">The <b><sup>quick brown <em>fox jumps </b> </sup> overthe </em> lazy <sub>dog while </sub> <ins>The fiveboxing </ins> <sup>wizards jump </sup>quickly</p>
+
+trueFalse
+htmlMeaning
+n
+HTML stands for Hyper Text Markup Language
+
+trueFalse
+breakBlock
+n
+The &lt;br&gt; tag is a block level element
+
+trueFalse
+relativeDef
+n
+You use a relative URL to link to different sites
+
+trueFalse
+tableFooter
+n
+When making a table you can give it a footer with &lt;tfooter&gt;
+
+trueFalse
+dropDown
+n
+To create a drop down menu you use the &lt;select&gt; element
+
+trueFalse
+videoAtt
+n
+'poster' is a valid attribute for the &lt;video&gt; element
+
+check
+inlineSelect
+y
+Select all inline elements
+6
+2
+&lt;b&gt;
+&lt;span&gt;
+&lt;input&gt;
+&lt;sub&gt;
+&lt;div&gt;
+&lt;p&gt;
+
+check
+newElements
+y
+Check all elements that were introduced in HTML5
+6
+2
+&lt;article&gt;
+&lt;abbr&gt;
+&lt;thead&gt;
+&lt;figure&gt;
+&lt;nav&gt;
+&lt;strike&gt;
+
+check
+semanticCheck
+y
+Check all elements with semantic meaning
+6
+2
+&lt;nav&gt;
+&lt;div&gt;
+&lt;span id="nav"&gt;
+&lt;article&gt;
+&lt;b&gt;
+&lt;strong&gt;
+
+check
+inputType
+y
+Check all valid values for the type attribute <p class="outputExample">&lt;input type='   ' name='example'...</p>
+9
+3
+button
+check
+color
+year
+file
+select
+radio
+textarea
+date
 quit
+
+
+
+
+

@@ -1,3 +1,39 @@
+imageTop
+textStyle
+n
+What HTML creates the following text: <p class="outputExample"><b>HTML</b> is <ins>the</ins> best language <i>ever</i></p>
+A
+B
+C
+D
+
+imageTop
+formMethod
+n
+Which form is valid and sends the variables in the url?
+A
+B
+C
+D
+
+imageTop
+imgCaption
+y
+What is the missing element that applies a caption to the image?
+&lt;caption&gt;
+&lt;figcaption&gt;
+&lt;label&gt;
+&lt;legend&gt;
+
+imageLeft
+escapeError
+y
+On what line is the mistake? 
+8
+12
+16
+15
+
 textLine
 bold
 y
@@ -64,22 +100,6 @@ crazyP
 y
 Which HTML displays the following text: <p class="outputExample">The <b><sup>quick brown <em>fox jumps </b> </sup> overthe </em> lazy <sub>dog while </sub> <ins>The fiveboxing </ins> <sup>wizards jump </sup>quickly</p>
 
-imageLeft
-escapeError
-y
-On what line is the mistake? 
-8
-12
-16
-15
 
-imageTop
-textStyle
-n
-What HTML creates the following text: <p class="outputExample"><b>HTML</b> is <ins>the</ins> best language <i>ever</i></p>
-A
-B
-C
-D
 
 
