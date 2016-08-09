@@ -1,63 +1,143 @@
-form {
-    width: 95%;
-    margin: 0 auto;
+.imgTop{
+  width: 95%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
+.outputExample{
+  text-align: center;
+  font-size: 200%;
+  background-color: white;
+}
 
-.quadImage .optionL {
-    float: left;
+.answer{
+  padding: 10px;
+  font-size: 200%;
+  text-align: center;
+}
+
+h2{
+  font-weight: bold;
+  border-bottom: 3px solid gray;
+  width: 30%;
+  
+  color: darkgray;
+  
+  background-color: white;
+  border-radius: 10px;
+
+  padding-bottom: 0;
+  padding-left: 5px;
+  
+  margin-top: 30px; !important
 
 }
 
-.quadImage .optionR {
-    float: right;
-
+label{
+  border: 3px solid lightgray;
+  min-width: 125px; 
+  
+  border-radius: 10px;
+  
+  position: relative;
+  left: 5px;
+  
+  padding: 5px;
 }
 
-.quadImage img {
-    vertical-align: top;
-    width: 90%;
-    margin-bottom: 20px;
-}
-
-.quadImage label{
-  width: 45%; !important
-}
-
-label {
-    display: inline-block;
-    font-size: 150%;
-    margin-right: 20px;
-    text-align: center;
-    padding-bottom: 15px;
-}
-
-#submitButton {
-    color: black;
-    border-radius: 15px;
-    border: none;
-    font-size: 20px;
-    padding: 10px 20px 10px 20px;
-    background: #eee;
-    background-image: linear-gradient(to bottom, #eee, #aaa);
-}
-
-#submitButton:hover {
-    background: #aaa;
-}
-
-.outputExample {
-    font-size: 120%; !important
-    text-align: center; !important
-    background-color: rgba(256, 256, 256, 0.3);
-    font-weight: normal; 
+@media only screen and (max-width: 800px) {
+    h2{
+      width: 50%;
+    }     
+    label{
+      min-width: 75px;
+    }
     
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    .imgLeftAnswers{
+      float: none;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .imgLeftAnswers .answer{
+      float: left;
+    }
+
 }
 
-.check .ans{
-  text-align: left;
-  width: 20%;
+input[type="radio"]{
+  display: none;
+}
+
+.question{ 
+  border: 3px solid darkgray;
+  border-radius:  0 5px 20px 20px;
+  background-color: rgba(255,255,255, 0.9);
+  
+}
+
+legend{
+  border: 3px solid darkgray;
+  border-radius: 10px 5px 5px 0;
+  width: 60%;
+  position: relative;
+  left: -3px;
+  background-color: rgba(70,160,70, 0.8);
+  color: white;
+  /*background-color: #4A4;*/
+  padding-left: 5px;
+  font-weight: bold;
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    legend{
+      width: 90%;
+    }        
+}
+
+
+input:checked+label{
+  background-color: #449D44;
+  color: white;
+  border-color: #5A5;
+}
+
+input:checked{
+  background-color: white;
+}
+
+label:hover{
+  background-color: lightgray; !important
+}
+
+img{
+  box-shadow: 0px 3px 3px 3px  gray;
+}
+
+.questionImgLeft{
+  padding: 20px;
+}
+
+.imgLeft{
+  display: block;
+  float: left;
+  width: 50%;
+}
+
+.imgLeftAnswers{
+  margin-top: 10px;
+  float: left;
+}
+
+.imgLeftAnswers .answer{
+  padding-bottom: 30px;
+} 
+
+.text .imgLeftAnswers{
+  float: none;
+  font-size: 175%;
 }
