@@ -94,12 +94,7 @@ quadImage
 correctVideo
 y
 Which displays the video "birds.mp4" with a width of 400px and shows controls?
-
-quadImage
-crazyP
-y
-Which HTML displays the following text: <p class="outputExample">The <b><sup>quick brown <em>fox jumps </b> </sup> overthe </em> lazy <sub>dog while </sub> <ins>The fiveboxing </ins> <sup>wizards jump </sup>quickly</p>
-
+quit
 
 
 

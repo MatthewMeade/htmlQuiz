@@ -52,7 +52,11 @@ label{
     }     
     label{
       min-width: 75px;
+<<<<<<< HEAD
     }
+=======
+    } 
+>>>>>>> bootstrap
     
     .imgLeftAnswers{
       float: none;
