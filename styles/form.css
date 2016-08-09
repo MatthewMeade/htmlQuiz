@@ -28,16 +28,22 @@ h2{
   border-radius: 10px;
 
   padding-bottom: 0;
+  padding-left: 5px;
   
   margin-top: 30px; !important
 
 }
 
 label{
-  border: 5px solid lightgray;
+  border: 3px solid lightgray;
   min-width: 125px; 
   
   border-radius: 10px;
+  
+  position: relative;
+  left: 5px;
+  
+  padding: 5px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -75,7 +81,7 @@ input[type="radio"]{
 legend{
   border: 3px solid darkgray;
   border-radius: 10px 5px 5px 0;
-  width: 50%;
+  width: 60%;
   position: relative;
   left: -3px;
   background-color: rgba(70,160,70, 0.8);
@@ -97,12 +103,41 @@ legend{
 input:checked+label{
   background-color: #449D44;
   color: white;
+  border-color: #5A5;
 }
 
 input:checked{
   background-color: white;
 }
 
+label:hover{
+  background-color: lightgray; !important
+}
+
 img{
   box-shadow: 0px 3px 3px 3px  gray;
+}
+
+.questionImgLeft{
+  padding: 20px;
+}
+
+.imgLeft{
+  display: block;
+  float: left;
+  width: 50%;
+}
+
+.imgLeftAnswers{
+  margin-top: 10px;
+  float: left;
+}
+
+.imgLeftAnswers .answer{
+  padding-bottom: 30px;
+} 
+
+.text .imgLeftAnswers{
+  float: none;
+  font-size: 175%;
 }

@@ -34,7 +34,6 @@ function AnimQuiz(){
   });
 }
 
-
 function StartTimer(){
   AnimTimer()
   var currentTime = Date.now();
@@ -45,7 +44,11 @@ function StartTimer(){
 function AnimTimer(){
   $("#timeDisplay").animate({
     right: "5px"
-  }, 2000);
+  }, 2000, function(){
+
+  });
 }
+
+
 
 
