@@ -39,7 +39,7 @@ function StartTimer(){
   AnimTimer()
   var currentTime = Date.now();
   document.getElementById("startTime").value = currentTime;
-  setInterval(TimerDisplay, 1000)
+  setInterval(TimerDisplay, 1000);
 }
 
 function AnimTimer(){
