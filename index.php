@@ -36,12 +36,31 @@
   <link type="text/css" rel="stylesheet" href="styles/form.css">
   <link type="text/css" rel="stylesheet" href="styles/page.css">
   
-
+ 
   
   <style>
   
     .hidden{
       /*display: none;*/
+    }
+    
+    .questionImgLeft{
+      padding: 20px;
+    }
+    
+    .imgLeft{
+      display: block;
+      float: left;
+      width: 50%;
+    }
+    
+    .imgLeftAnswers{
+      margin-top: 10px;
+      float: left;
+    }
+    
+    .imgLeftAnswers .answer{
+      padding-bottom: 30px;
     }
 
   </style>
@@ -103,6 +122,33 @@
               <input type="radio" name="textStyle" value="d" id="textStyleD" required>
               <label for="textStyleD">D</label>
             </div>
+        </fieldset>
+        
+        <h2>Question 2</h2>
+        <fieldset class="question questionImgLeft">
+            <legend>On what line is the mistake?</legend>
+            <img src="quizSnips/escapeError.png" class="imgLeft">
+            <div class="imgLeftAnswers">
+              <div class="answer">
+                  <input type="radio" name="escapeError" value="a" id="escapeErrorA" required>
+                  <label for="escapeErrorA">8</label>
+              </div>
+              
+              <div class="answer">
+                  <input type="radio" name="escapeError" value="b" id="escapeErrorB" required>
+                  <label for="escapeErrorB">12</label>
+              </div>
+              
+              <div class="answer">
+                  <input type="radio" name="escapeError" value="c" id="escapeErrorC" required>
+                  <label for="escapeErrorC">16</label>
+              </div>
+              
+              <div class="answer">
+                  <input type="radio" name="escapeError" value="d" id="escapeErrorD" required>
+                  <label for="escapeErrorD">15</label>
+              </div>
+          </div>
         </fieldset>
         
 
