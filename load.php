@@ -1,8 +1,10 @@
 <?php 
   
-  // $settings = parse_ini_file("test.ini");
+  $settings = parse_ini_file("test.ini", true);
 
-  // print_r($settings);
-  echo "test"
-
+  foreach ($settings as $key => $question){
+    echo $key.": ";
+    print_r($question);
+    echo "<br><br>";
+  }
 ?>
