@@ -32,7 +32,7 @@
       $new->correct = $question["correct"];
       
       if(array_key_exists("shuffle", $question)){
-        $new->shuffle = $question["shuffle"]; 
+        $new->shuffle = $question["shuffle"];  
       }
       
       for ($char = 'A'; array_key_exists("opt".$char, $question) ; $char++) { 
