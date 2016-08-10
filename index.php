@@ -3,10 +3,7 @@
   $title = "HTML Quiz";
   $leadDescription = "When you are ready to begin click the button below, you will be timed. </br> 
                       Once the quiz is submitted you will be directed to your results page";
-                      
-  for ($i=0; $i < 10; $i++) { 
-    $quizFiller = $quizFiller.$title."<br>";
-  }
+                    
   
   $groups = array("Multiple Choice", "Check Lists", "True/False");
   $groupsOut = "";
