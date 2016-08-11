@@ -1,6 +1,6 @@
 <h2>Question 0</h2>
 <fieldset class=" question trueFalse">
-    <legend>[QUESTION_NAME]</legend>
+    <legend>[QUESTION_TEXT]</legend>
     <div class="trueDiv tf">
       <input name="[QUESTION_NAME]" value="a" type="radio" id="[QUESTION_NAME]A">
       <label for="[QUESTION_NAME]A" class="true">True</true>

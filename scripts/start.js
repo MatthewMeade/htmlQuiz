@@ -28,7 +28,7 @@ function AnimNav(){
 function AnimQuiz(){
   $(quizPage).toggleClass("hidden");
   $(quizPage).animate({
-    top: ($("nav").outerHeight() + 10) + "px"
+    top: "-60px"/*($("nav").outerHeight() + 10) + "px"*/
   }, 1500, function(){
     StartTimer();
   });

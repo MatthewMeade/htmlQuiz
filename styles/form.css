@@ -7,8 +7,10 @@
 
 .outputExample{
   text-align: center;
-  font-size: 200%;
+  font-size: 150%;
   background-color: white;
+  color: black;
+  width: 100%;
 }
 
 .answer{
@@ -52,11 +54,8 @@ label{
     }     
     label{
       min-width: 75px;
-<<<<<<< HEAD
     }
-=======
-    } 
->>>>>>> bootstrap
+ 
     
     .imgLeftAnswers{
       float: none;
@@ -126,22 +125,62 @@ img{
   padding: 20px;
 }
 
-.imgLeft{
+.ImgLeft{
   display: block;
   float: left;
   width: 50%;
 }
 
-.imgLeftAnswers{
+.ImgLeftAnswers{
   margin-top: 10px;
   float: left;
 }
 
-.imgLeftAnswers .answer{
+.ImgLeftAnswers .answer{
   padding-bottom: 30px;
 } 
 
-.text .imgLeftAnswers{
+.text .ImgLeftAnswers{
   float: none;
   font-size: 175%;
+}
+
+.tf{
+  float: left;
+  font-size: 175%;
+  /*width: 200px;*/
+  text-align: center;
+  margin: 0;
+}
+
+.true{
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+
+}
+
+.false{
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+}
+
+.check label{
+  margin-right: 10px;
+
+}
+/*
+input{
+    margin-left: 13px;
+    background-color: white; !important
+    color: white; !important
+    z-index: 1;
+    
+}*/
+
+
+.groupTitle{
+  padding-top: 80px;
 }

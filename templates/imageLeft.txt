@@ -22,4 +22,4 @@
           <input type="radio" name="[QUESTION_NAME]" value="d" id="[QUESTION_NAME]D" required>
           <label for="[QUESTION_NAME]D">[ANSWER_D]</label>
       </div>
-  </div>
+  </fieldset>

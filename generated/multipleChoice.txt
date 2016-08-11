@@ -1,6 +1,6 @@
-0<h2>Question 0</h2>
+<h2>Question 0</h2>
 <fieldset class="question quadImage">
-    <legend>Which is the correct way to start a HTML page?</legend>
+    <legend>Which is the correct way to start a HTML page? Test</legend>
     <div class="row">
         <div class="col-lg-6">
           <input type="radio" name="htmlTemplate" value="a" id="[NAME]A">
@@ -60,7 +60,7 @@
     
     <div class="imgLeftAnswers">
       <input type="radio" name="bold" value="c" id="boldC"required>
-      <label for="boldC">[ANSWER_E];</label>
+      <label for="boldC">&lt;p style='bold'&gt;Text&lt;/p&gt;</label>
     </div>
     
     <div class="imgLeftAnswers">    
@@ -92,7 +92,7 @@
     </div>
 </fieldset><h2>Question 0</h2>
 <fieldset class="question questionImgTop">
-    <legend>What HTML creates the following text: <p class=outputExample><b>HTML</b> is <ins>the</ins> best language <i>ever</i></p></legend>
+    <legend>What HTML creates the following text: </h2><p class=outputExample><b>HTML</b> is <ins>the</ins> best language <i>ever</i></p><h2></legend>
     <img src="quizSnips/textStyle.png" class="imgTop">
     
     <div class="answer col-sm-3">
@@ -162,4 +162,4 @@
           <input type="radio" name="escapeError" value="d" id="escapeErrorD" required>
           <label for="escapeErrorD">15</label>
       </div>
-  </div>
+  </fieldset>

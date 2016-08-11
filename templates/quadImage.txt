@@ -3,7 +3,7 @@
     <legend>[QUESTION_TEXT]</legend>
     <div class="row">
         <div class="col-lg-6">
-          <input type="radio" name="[QUESTION_NAME]" value="a" id="[NAME]A">
+          <input type="radio" name="[QUESTION_NAME]" value="a" id="[QUESTION_NAME]A">
           <label for="[QUESTION_NAME]A"><img src='quizSnips/[QUESTION_NAME]A.png'></lablel>
         </div>
         <div class="col-lg-6">

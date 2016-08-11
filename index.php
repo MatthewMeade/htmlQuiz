@@ -1,18 +1,39 @@
 <?php 
 
-  $title = "HTML Quiz";
-  $leadDescription = "When you are ready to begin click the button below, you will be timed. </br> 
-                      Once the quiz is submitted you will be directed to your results page";
-                    
+  include 'load.php';
   
-  $groups = array("Multiple Choice", "Check Lists", "True/False");
-  $groupsOut = "";
+  global $settings;
   
-  foreach ($groups as $group){
-    $groupsOut = $groupsOut."<li class='nav-item active'> <a class='nav-link' href=''>".$group."</a> </li>"."\n";
+  $pageSettings = $settings["quiz"];
+  $title = $pageSettings["title"];
+  $leadDescription = $pageSettings["leadDescription"];
+  
+  $groupNames = $settings["groupsDisplay"];
+  $groupNamesOut = "";
+  
+  
+  $firstPrinted = false;
+  
+  foreach ($groupNames as $key => $group){
+    //$groupNamesOut = $groupNamesOut."<li class='nav-item'> <a class='nav-link' href='#".$key."'>".$group."</a> </li>"."\n";
+      $groupNamesOut = $groupNamesOut."<li class='nav-item'> <a class='nav-link ";
+    if(!$firstPrinted){
+      $groupNamesOut = $groupNamesOut."active";
+      $firstPrinted = true;
+    }
+    $groupNamesOut = $groupNamesOut."' href='#".$key."'>".$group."</a> </li>\n";
   }
   
-
+  $groups = $settings["groups"];
+  
+  $quizPrint = "";
+  
+  
+  foreach ($groups as $key => $group) {
+    $quizPrint = $quizPrint . "<div class='group'>\n\t<h1 class='groupTitle' id='" .$group. "'>". $groupNames[$group] . "</h2>\n";
+    $quizPrint = $quizPrint . file_get_contents("generated/$group.txt");
+    $quizPrint = $quizPrint . "</div>\n";
+  }
 
  ?>
 <!DOCTYPE html>
@@ -40,62 +61,52 @@
   <style>
   
     .hidden{
-      /*display: none;*/
+      display: none;
     }
     
-    .tf{
-      float: left;
-      font-size: 175%;
-      /*width: 200px;*/
-      text-align: center;
-      margin: 0;
+    .groupTitle{
+      font-weight: bold;
+      border-bottom: 4px solid darkgray;
+      /*margin-top: 100px;*/
     }
     
-    .true{
-      border-right: none;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-
+    nav a.active{
+      /*background-color: rgba(65,160,65, 0.5);*/
+      
+      border-bottom:  3px solid rgba(65,160,65, 0.5);
+      /*border-top:  3px solid rgba(65,160,65, 0.5);*/
+      
     }
     
-    .false{
-      border-left: none;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-
+    nav a{
+      padding: 0px;
+      
+      border-radius: 10px;
     }
     
-    .check label{
-      margin-right: 10px;
-
+    nav a:hover{
+      background-color: white;
     }
-    /*
-    input{
-        margin-left: 13px;
-        background-color: white; !important
-        color: white; !important
-        z-index: 1;
-        
-    }*/
+    
     
   
 
   </style>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#nav">
     
     <!-- NAVBAR -->
-    <nav class="navbar navbar-fixed-top navbar-light bg-faded"> 
+    <nav class="navbar navbar-fixed-top navbar-light bg-faded" id="nav"> 
       <div id="navContent">
         <a class="navbar-brand" href="#"><?php echo $title; ?></a>
         <ul class="nav navbar-nav">
-            <?php echo $groupsOut ?>
+            <?php echo $groupNamesOut ?>
         </ul>
         
         <div id="prog">
           <p id="progLabel">Progress: </p>
           <div id="progDiv">
-            <progress class="progress progress-success progress-striped progress-animated active" value="10" max="100"></progress>
+            <progress class="progress progress-success progress-striped progress-animated" value="10" max="100"></progress>
           </div>
         </div>
       </div>
@@ -113,155 +124,7 @@
     <div class="container-fluid hidden" id="quizDiv">
       <form action="submit.php" method="post">
         <input type="hidden" name="startTime" value="" id="startTime">
-        
-        <h2>Question -3</h2>
-        <fieldset class="question check">
-          <legend>Select all inline elements</legend>
-          
-          <input type="checkbox" name="inlineSelect" value="a" id="inlineSelectA">
-          <label for="inlineSelectA">&lt;b&gt;</label>
-          
-          <input type="checkbox" name="inlineSelect" value="b" id="inlineSelectB">
-          <label for="inlineSelectB">&lt;span&gt;</label> 
-          
-          <br>
-          
-          <input type="checkbox" name="inlineSelect" value="c" id="inlineSelectC">
-          <label for="inlineSelectC">&lt;input&gt;</label>
-          
-          <input type="checkbox" name="inlineSelect" value="d" id="inlineSelectD">
-          <label for="inlineSelectD">&lt;sub&gt;</label>
-          
-          <br>
-          
-          <input type="checkbox" name="inlineSelect" value="e" id="inlineSelectE">
-          <label for="inlineSelectE">&lt;div&gt;</label>
-          
-          <input type="checkbox" name="inlineSelect" value="f" id="inlineSelectF">
-          <label for="inlineSelectF">&lt;p&gt;</label>
-        </fieldset>
-        
-        <h2>Question -2</h2>
-        <fieldset class=" question trueFalse">
-            <legend>HTML stands for Hyper Text Markup Language</legend>
-            <div class="trueDiv tf">
-              <input name="htmlMeaning" value="a" type="radio" id="htmlMeaningA">
-              <label for="htmlMeaningA" class="true">True</true>
-            </div>
-            
-            <div class="falseDiv tf">
-              <input name="htmlMeaning" value="b" type="radio" id="htmlMeaningB">
-              <label for="htmlMeaningB" class="false">False</true>
-            </div>
-        </fieldset>
-        
-        <h2>Question -1</h2>
-        <fieldset class="question quadImage">
-            <legend>Which is the correct wat to start an html page?</legend>
-            <div class="row">
-                <div class="col-lg-6">
-                  <input type="radio" name="htmlTemplate" value="a" id="htmlTemplateA">
-                  <label for="htmlTemplateA"><img src='quizSnips/htmlTemplateA.png'></lablel>
-                </div>
-                <div class="col-lg-6">
-                  <input type="radio" name="htmlTemplate" value="b" id="htmlTemplateB">
-                  <label for="htmlTemplateB"><img src='quizSnips/htmlTemplateB.png'></lablel>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                  <input type="radio" name="htmlTemplate" value="c" id="htmlTemplateC">
-                  <label for="htmlTemplateC"><img src='quizSnips/htmlTemplateC.png'></lablel>
-                </div>
-                <div class="col-lg-6">
-                  <input type="radio" name="htmlTemplate" value="d" id="htmlTemplateD">
-                  <label for="htmlTemplateD"><img src='quizSnips/htmlTemplateD.png'></lablel>
-                </div>
-            </div>
-        </fieldset>
-        
-        <h2>Question 0</h2>
-        <fieldset class="question text">
-            <legend> Which creates bold text? </legend>
-            
-            <div class="imgLeftAnswers">
-              <input type="radio" name="bold" value="a" id="boldA"required>
-              <label for="boldA">&lt;b&gt;Text&lt;/b&gt; </label>
-            </div>
-            
-            <div class="imgLeftAnswers">
-              <input type="radio" name="bold" value="b" id="boldB"required>
-              <label for="boldB">&lt;bold&gt;Text&lt;/bold&gt;</label>  
-            </div>
-            
-            <div class="imgLeftAnswers">
-              <input type="radio" name="bold" value="c" id="boldC"required>
-              <label for="boldC">&lt;p style="bold"&gt;Text&lt;/p&gt;</label>
-            </div>
-            
-            <div class="imgLeftAnswers">    
-              <input type="radio" name="bold" value="d" id="boldD"required>
-              <label for="boldD">&lt;p bold&gt;Text&lt;/p&gt;</label>
-            </div>
-        </fieldset>
-        
-        
-        <h2>Question 1</h2>
-        <fieldset class="question questionImgTop">
-            <legend>What HTML creates the following text:</legend>
-            <p class="outputExample"><b>HTML</b> is <ins>the</ins> best language <i>ever</i></p>
-            <img src="quizSnips/textStyle.png" class="imgTop">
-            
-            <div class="answer col-sm-3">
-              <input type="radio" name="textStyle" value="a" id="textStyleA" required>
-              <label for="textStyleA">A</label>
-            </div>
-            
-            <div class="answer col-sm-3">
-              <input type="radio" name="textStyle" value="b" id="textStyleB" required>
-              <label for="textStyleB">B</label>
-            </div>
-            
-            <div class="answer col-sm-3">
-              <input type="radio" name="textStyle" value="c" id="textStyleC" required>
-              <label for="textStyleC">C</label>
-            </div>
-            
-            <div class="answer col-sm-3">
-              <input type="radio" name="textStyle" value="d" id="textStyleD" required>
-              <label for="textStyleD">D</label>
-            </div>
-        </fieldset>
-        
-        <h2>Question 2</h2>
-        <fieldset class="question questionImgLeft">
-            <legend>On what line is the mistake?</legend>
-            <img src="quizSnips/escapeError.png" class="imgLeft"> 
-            <div class="imgLeftAnswers">
-              <div class="answer">
-                  <input type="radio" name="escapeError" value="a" id="escapeErrorA" required>
-                  <label for="escapeErrorA">8</label>
-              </div>
-              
-              <div class="answer">
-                  <input type="radio" name="escapeError" value="b" id="escapeErrorB" required>
-                  <label for="escapeErrorB">12</label>
-              </div>
-              
-              <div class="answer">
-                  <input type="radio" name="escapeError" value="c" id="escapeErrorC" required>
-                  <label for="escapeErrorC">16</label>
-              </div>
-              
-              <div class="answer">
-                  <input type="radio" name="escapeError" value="d" id="escapeErrorD" required>
-                  <label for="escapeErrorD">15</label>
-              </div>
-          </div>
-        </fieldset>
-        
-
-            
+        <?php echo $quizPrint ?>
         </form>
     </div>
   </div>
@@ -311,7 +174,10 @@
       }, 200);
     });
     
-    
+    var headings = document.getElementsByTagName("h2");
+    for (var i = 0; i < headings.length; i++) {
+      headings[i].innerHTML = "Question " + i;
+    }
     
   
     

@@ -12,23 +12,72 @@
   
   $settings = parse_ini_file("settings/quizSettings.ini", true); //Settings.ini
   
-  $groups = $settings["groups"]; //Name of groups
-  $classes = $settings["classes"]; // Name of classes
+  CheckForUpdate();
+  
+  
+  
+  function CheckForUpdate(){
+      
+    $files = scandir("./settings");
+    $totalString = "";
+    
+    foreach ($files as $key => $value) {  
+        if($value != "." && $value != ".."){
+          $totalString = $totalString . file_get_contents("settings/".$value);
+        }
+    }
+    
+    $files = scandir("./templates");
+    
+    foreach ($files as $key => $value) {  
+        if($value != "." && $value != ".."){
+          $totalString = $totalString . file_get_contents("templates/".$value);
+        }
+    }
+    
+    $hash = md5($totalString);
+    
+    if($hash == file_get_contents("lasthash")){
+      echo "No change";
+      // Update();
+    }else{
+      file_put_contents("lasthash", $hash);
+      echo "Changed";
+      Update();
+    }
+
+  }
   
   $answers = array(); //Array of answers to be checked with inputs in submit.php
   
   $numQuestions = 0;  //Total number of questions for progress and score
   
   
-  //Loop though each of the groups
-  foreach ($groups as $groupName) {
-      //Load in an array of the questions
-      $questionsINI = parse_ini_file("settings/$groupName.ini", true); 
-      $questions = loadQuestions($questionsINI); 
-      
-      
-      PrintQuestions($questions, $groupName);
-  }
+  function Update(){
+    
+    
+    global $settings;
+    $groups = $settings["groups"]; //Name of groups
+    $classes = $settings["classes"]; // Name of classes
+    
+    
+  
+    //Loop though each of the groups
+    foreach ($groups as $groupName) {
+        //Load in an array of the questions
+        $questionsINI = parse_ini_file("settings/$groupName.ini", true); 
+        $questions = loadQuestions($questionsINI); 
+        
+        
+        PrintQuestions($questions, $groupName);
+    }
+    
+    global $answers;
+    file_put_contents("correctAnswers", json_encode($answers));
+
+    
+  
+}
   
   
   
@@ -91,9 +140,15 @@
   
   function PrintQuestions($questionArray, $groupName){
     
+    $cleared = false;
+    
     foreach ($questionArray as $questionName => $question) {
+      
+        if(!$cleared){ //If the file still has old code from last ime
+          fclose(fopen("generated/$groupName.txt", "w")); //erase the old code
+          $cleared = true;//Make it as safe to append
+        }
         $html = LoadFromTemplate($question); 
-        fclose(fopen("generated/$groupName.txt", "r"));
         file_put_contents("generated/$groupName.txt", $html, FILE_APPEND );
     }
     

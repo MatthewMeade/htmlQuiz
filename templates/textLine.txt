@@ -14,7 +14,7 @@
     
     <div class="imgLeftAnswers">
       <input type="radio" name="[QUESTION_NAME]" value="c" id="[QUESTION_NAME]C"required>
-      <label for="[QUESTION_NAME]C">[ANSWER_E];</label>
+      <label for="[QUESTION_NAME]C">[ANSWER_C]</label>
     </div>
     
     <div class="imgLeftAnswers">    
