@@ -1,0 +1,26 @@
+<h2>Question 0</h2>
+<fieldset class="question check">
+  <legend>[QUESTION_TEXT]</legend>
+  
+  <input type="checkbox" name="[QUESTION_NAME]" value="a" id="[QUESTION_NAME]A">
+  <label for="[QUESTION_NAME]A">[ANSWER_A]</label>
+  
+  <input type="checkbox" name="[QUESTION_NAME]" value="b" id="[QUESTION_NAME]B">
+  <label for="[QUESTION_NAME]B">[ANSWER_B]</label> 
+  
+  <br>
+  
+  <input type="checkbox" name="[QUESTION_NAME]" value="c" id="[QUESTION_NAME]C">
+  <label for="[QUESTION_NAME]C">[ANSWER_C]</label>
+  
+  <input type="checkbox" name="[QUESTION_NAME]" value="d" id="[QUESTION_NAME]D">
+  <label for="[QUESTION_NAME]D">[ANSWER_D]</label>
+  
+  <br>
+  
+  <input type="checkbox" name="[QUESTION_NAME]" value="e" id="[QUESTION_NAME]E">
+  <label for="[QUESTION_NAME]E">[ANSWER_E]</label>
+  
+  <input type="checkbox" name="[QUESTION_NAME]" value="f" id="[QUESTION_NAME]F">
+  <label for="[QUESTION_NAME]F">[ANSWER_F]</label>
+</fieldset>

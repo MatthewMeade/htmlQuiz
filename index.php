@@ -236,7 +236,7 @@
         <h2>Question 2</h2>
         <fieldset class="question questionImgLeft">
             <legend>On what line is the mistake?</legend>
-            <img src="quizSnips/escapeError.png" class="imgLeft">
+            <img src="quizSnips/escapeError.png" class="imgLeft"> 
             <div class="imgLeftAnswers">
               <div class="answer">
                   <input type="radio" name="escapeError" value="a" id="escapeErrorA" required>

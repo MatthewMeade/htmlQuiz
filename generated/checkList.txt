@@ -1,0 +1,51 @@
+<h2>Question 0</h2>
+<fieldset class="question check">
+  <legend>Select all inline elements</legend>
+  
+  <input type="checkbox" name="inlineSelect" value="a" id="inlineSelectA">
+  <label for="inlineSelectA">&lt;b&gt;</label>
+  
+  <input type="checkbox" name="inlineSelect" value="b" id="inlineSelectB">
+  <label for="inlineSelectB">&lt;span&gt;</label> 
+  
+  <br>
+  
+  <input type="checkbox" name="inlineSelect" value="c" id="inlineSelectC">
+  <label for="inlineSelectC">&lt;input&gt;</label>
+  
+  <input type="checkbox" name="inlineSelect" value="d" id="inlineSelectD">
+  <label for="inlineSelectD">&lt;sub&gt;</label>
+  
+  <br>
+  
+  <input type="checkbox" name="inlineSelect" value="e" id="inlineSelectE">
+  <label for="inlineSelectE">&lt;div&gt;</label>
+  
+  <input type="checkbox" name="inlineSelect" value="f" id="inlineSelectF">
+  <label for="inlineSelectF">&lt;p&gt;</label>
+</fieldset><h2>Question 0</h2>
+<fieldset class="question check">
+  <legend>Check all elements that were introduced in HTML5</legend>
+  
+  <input type="checkbox" name="newElements" value="a" id="newElementsA">
+  <label for="newElementsA">&lt;article&gt;</label>
+  
+  <input type="checkbox" name="newElements" value="b" id="newElementsB">
+  <label for="newElementsB">&lt;abbr&gt;</label> 
+  
+  <br>
+  
+  <input type="checkbox" name="newElements" value="c" id="newElementsC">
+  <label for="newElementsC">&lt;thead&gt;</label>
+  
+  <input type="checkbox" name="newElements" value="d" id="newElementsD">
+  <label for="newElementsD">&lt;figure&gt;</label>
+  
+  <br>
+  
+  <input type="checkbox" name="newElements" value="e" id="newElementsE">
+  <label for="newElementsE">&lt;nav&gt;</label>
+  
+  <input type="checkbox" name="newElements" value="f" id="newElementsF">
+  <label for="newElementsF">&lt;strike&gt</label>
+</fieldset>

@@ -1,0 +1,13 @@
+<h2>Question 0</h2>
+<fieldset class=" question trueFalse">
+    <legend>[QUESTION_NAME]</legend>
+    <div class="trueDiv tf">
+      <input name="[QUESTION_NAME]" value="a" type="radio" id="[QUESTION_NAME]A">
+      <label for="[QUESTION_NAME]A" class="true">True</true>
+    </div>
+    
+    <div class="falseDiv tf">
+      <input name="[QUESTION_NAME]" value="b" type="radio" id="[QUESTION_NAME]B">
+      <label for="[QUESTION_NAME]B" class="false">False</true>
+    </div>
+</fieldset>

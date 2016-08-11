@@ -1,0 +1,25 @@
+<h2>Question 0</h2>
+<fieldset class="question questionImgTop">
+    <legend>[QUESTION_TEXT]</legend>
+    <img src="quizSnips/[QUESTION_NAME].png" class="imgTop">
+    
+    <div class="answer col-sm-3">
+      <input type="radio" name="[QUESTION_NAME]" value="a" id="[QUESTION_NAME]A" required>
+      <label for="[QUESTION_NAME]A">[ANSWER_A]</label>
+    </div>
+    
+    <div class="answer col-sm-3">
+      <input type="radio" name="[QUESTION_NAME]" value="b" id="[QUESTION_NAME]B" required>
+      <label for="[QUESTION_NAME]B">[ANSWER_B]</label>
+    </div>
+    
+    <div class="answer col-sm-3">
+      <input type="radio" name="[QUESTION_NAME]" value="c" id="[QUESTION_NAME]C" required>
+      <label for="[QUESTION_NAME]C">[ANSWER_C]</label>
+    </div>
+    
+    <div class="answer col-sm-3">
+      <input type="radio" name="[QUESTION_NAME]" value="d" id="[QUESTION_NAME]D" required>
+      <label for="[QUESTION_NAME]D">[ANSWER_D]</label>
+    </div>
+</fieldset>

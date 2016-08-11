@@ -92,7 +92,9 @@
   function PrintQuestions($questionArray, $groupName){
     
     foreach ($questionArray as $questionName => $question) {
-        LoadFromTemplate($question);
+        $html = LoadFromTemplate($question); 
+        fclose(fopen("generated/$groupName.txt", "r"));
+        file_put_contents("generated/$groupName.txt", $html, FILE_APPEND );
     }
     
     
@@ -107,7 +109,7 @@
   function LoadFromTemplate($question){
     
     //Load the file into a string
-    $template = file_get_contents("./templates/$question->type.txt");
+    $template = file_get_contents("templates/$question->type.txt");
     
     //Replace the placeholder text with the question values
     $template = str_replace("[QUESTION_CLASS]", $question->type, $template);
@@ -117,14 +119,15 @@
     //If the question has text as answers load them all in 
     if(isset($question->answers) == true){
       foreach ($question->answers as $key => $value) {
-        $template = str_replace("[ANSWER_.$key.]", $value, $template);
+        $key = "[ANSWER_".$key."]";
+        $template = str_replace($key, $value, $template);
       }
     }
     
     
     //Return string
-    //return $template;
-    echo $template;
+    return $template;
+    //echo $template;
   }
     
   

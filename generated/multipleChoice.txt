@@ -1,1 +1,165 @@
-0
+0<h2>Question 0</h2>
+<fieldset class="question quadImage">
+    <legend>Which is the correct way to start a HTML page?</legend>
+    <div class="row">
+        <div class="col-lg-6">
+          <input type="radio" name="htmlTemplate" value="a" id="[NAME]A">
+          <label for="htmlTemplateA"><img src='quizSnips/htmlTemplateA.png'></lablel>
+        </div>
+        <div class="col-lg-6">
+          <input type="radio" name="htmlTemplate" value="b" id="htmlTemplateB">
+          <label for="htmlTemplateB"><img src='quizSnips/htmlTemplateB.png'></lablel>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+          <input type="radio" name="htmlTemplate" value="c" id="htmlTemplateC">
+          <label for="htmlTemplateC"><img src='quizSnips/htmlTemplateC.png'></lablel>
+        </div>
+        <div class="col-lg-6">
+          <input type="radio" name="htmlTemplate" value="d" id="htmlTemplateD">
+          <label for="htmlTemplateD"><img src='quizSnips/htmlTemplateD.png'></lablel>
+        </div>
+    </div>
+</fieldset><h2>Question 0</h2>
+<fieldset class="question quadImage">
+    <legend>Which is the correct HTML for grouping form elements?</legend>
+    <div class="row">
+        <div class="col-lg-6">
+          <input type="radio" name="formGrouping" value="a" id="[NAME]A">
+          <label for="formGroupingA"><img src='quizSnips/formGroupingA.png'></lablel>
+        </div>
+        <div class="col-lg-6">
+          <input type="radio" name="formGrouping" value="b" id="formGroupingB">
+          <label for="formGroupingB"><img src='quizSnips/formGroupingB.png'></lablel>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+          <input type="radio" name="formGrouping" value="c" id="formGroupingC">
+          <label for="formGroupingC"><img src='quizSnips/formGroupingC.png'></lablel>
+        </div>
+        <div class="col-lg-6">
+          <input type="radio" name="formGrouping" value="d" id="formGroupingD">
+          <label for="formGroupingD"><img src='quizSnips/formGroupingD.png'></lablel>
+        </div>
+    </div>
+</fieldset><h2>Question 0</h2>
+<fieldset class="question text">
+    <legend>Which creates bold text?</legend>
+    
+    <div class="imgLeftAnswers">
+      <input type="radio" name="bold" value="a" id="boldA"required>
+      <label for="boldA">&lt;b&gt;Text&lt;/b&gt;</label>
+    </div>
+    
+    <div class="imgLeftAnswers">
+      <input type="radio" name="bold" value="b" id="boldB"required>
+      <label for="boldB">&lt;bold&gt;Text&lt;/bold&gt;</label>  
+    </div>
+    
+    <div class="imgLeftAnswers">
+      <input type="radio" name="bold" value="c" id="boldC"required>
+      <label for="boldC">[ANSWER_E];</label>
+    </div>
+    
+    <div class="imgLeftAnswers">    
+      <input type="radio" name="bold" value="d" id="boldD"required>
+      <label for="boldD">&lt;p bold&gt;Text&lt;/p&gt;</label>
+    </div>
+</fieldset><h2>Question 0</h2>
+<fieldset class="question text">
+    <legend>0</legend>
+    
+    <div class="imgLeftAnswers">
+      <input type="radio" name="fieldset" value="a" id="fieldsetA"required>
+      <label for="fieldsetA">To create a form</label>
+    </div>
+    
+    <div class="imgLeftAnswers">
+      <input type="radio" name="fieldset" value="b" id="fieldsetB"required>
+      <label for="fieldsetB">To group several controls and labels together</label>  
+    </div>
+    
+    <div class="imgLeftAnswers">
+      <input type="radio" name="fieldset" value="c" id="fieldsetC"required>
+      <label for="fieldsetC">[ANSWER_E];</label>
+    </div>
+    
+    <div class="imgLeftAnswers">    
+      <input type="radio" name="fieldset" value="d" id="fieldsetD"required>
+      <label for="fieldsetD">To create interactive controls</label>
+    </div>
+</fieldset><h2>Question 0</h2>
+<fieldset class="question questionImgTop">
+    <legend>What HTML creates the following text: <p class=outputExample><b>HTML</b> is <ins>the</ins> best language <i>ever</i></p></legend>
+    <img src="quizSnips/textStyle.png" class="imgTop">
+    
+    <div class="answer col-sm-3">
+      <input type="radio" name="textStyle" value="a" id="textStyleA" required>
+      <label for="textStyleA">A</label>
+    </div>
+    
+    <div class="answer col-sm-3">
+      <input type="radio" name="textStyle" value="b" id="textStyleB" required>
+      <label for="textStyleB">B</label>
+    </div>
+    
+    <div class="answer col-sm-3">
+      <input type="radio" name="textStyle" value="c" id="textStyleC" required>
+      <label for="textStyleC">C</label>
+    </div>
+    
+    <div class="answer col-sm-3">
+      <input type="radio" name="textStyle" value="d" id="textStyleD" required>
+      <label for="textStyleD">D</label>
+    </div>
+</fieldset><h2>Question 0</h2>
+<fieldset class="question questionImgTop">
+    <legend>Which form is valid and sends the variables in the url?</legend>
+    <img src="quizSnips/formMethod.png" class="imgTop">
+    
+    <div class="answer col-sm-3">
+      <input type="radio" name="formMethod" value="a" id="formMethodA" required>
+      <label for="formMethodA">A</label>
+    </div>
+    
+    <div class="answer col-sm-3">
+      <input type="radio" name="formMethod" value="b" id="formMethodB" required>
+      <label for="formMethodB">B</label>
+    </div>
+    
+    <div class="answer col-sm-3">
+      <input type="radio" name="formMethod" value="c" id="formMethodC" required>
+      <label for="formMethodC">C</label>
+    </div>
+    
+    <div class="answer col-sm-3">
+      <input type="radio" name="formMethod" value="d" id="formMethodD" required>
+      <label for="formMethodD">D</label>
+    </div>
+</fieldset><h2>Question 2</h2>
+<fieldset class="question questionImgLeft">
+    <legend>On what line is the mistake?</legend>
+    <img src="quizSnips/escapeError.png" class="imgLeft">
+    <div class="imgLeftAnswers">
+      <div class="answer">
+          <input type="radio" name="escapeError" value="a" id="escapeErrorA" required>
+          <label for="escapeErrorA">8</label>
+      </div>
+      
+      <div class="answer">
+          <input type="radio" name="escapeError" value="b" id="escapeErrorB" required>
+          <label for="escapeErrorB">12</label>
+      </div>
+      
+      <div class="answer">
+          <input type="radio" name="escapeError" value="c" id="escapeErrorC" required>
+          <label for="escapeErrorC">16</label>
+      </div>
+      
+      <div class="answer">
+          <input type="radio" name="escapeError" value="d" id="escapeErrorD" required>
+          <label for="escapeErrorD">15</label>
+      </div>
+  </div>
