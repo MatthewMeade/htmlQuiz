@@ -38,11 +38,11 @@
     $hash = md5($totalString);
     
     if($hash == file_get_contents("lasthash")){
-      echo "No change";
+      // echo "No change";
       // Update();
     }else{
       file_put_contents("lasthash", $hash);
-      echo "Changed";
+      // echo "Changed";
       Update();
     }
 

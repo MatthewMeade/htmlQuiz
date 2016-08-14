@@ -1,24 +1,33 @@
 <?php
 
-    $total = 4;
+    include 'load.php';
+    
+    $total = 0;
     $score = 0;
 
-    $answers = array("b", "a", "c", "b");
-    $names = array("htmlTemplate", "bold", "textStyle", "escapeError");
+    $answers = json_decode(file_get_contents("correctAnswers"));
+    // print_r($answers);
+    // echo "<br>";
+    // print_r($_POST);
+    // echo "<br><br><br>";
+    // print_r($_POST["inlineSelect"]);
+    
+    if($_POST == NULL){
+      echo "<h1>Something went wrong!</h1> <a href='index.php'>If you didn't take the test yet, click here</a>";
+      return;
+    }
 
-    $i = 0;
-    foreach($names as $name){
-
-        $name = $names[$i];
-        $choice = $_POST[$name];
-        $correct = $answers[$i];
-
-        if($choice == $correct){
-            $score++;
-        }
-
-        
-        $i++;
+    foreach ($answers as $question => $correctAnswer) {
+      $total++;
+      if(is_array($_POST[$question])){
+        $total += 2;
+        $score += CompareArray($_POST[$question], $correctAnswer, 6);
+       }
+       else if($_POST[$question] == strtolower($correctAnswer)){
+          $score++;
+      }
+     
+      
     }
 
     $grade = $score/$total * 100;
@@ -32,16 +41,15 @@
     /* TIME */
     $totalTime = GetTotalTime();
     $timeDisplay = ConvertTime($totalTime);
-    
-    // mail('7096940182@txt.bell.ca', 'Page View',  $_SERVER['REMOTE_ADDR']);
 
     
     
     function ConvertTime($sec){
+      $outString = "";
       $minutes = 0;
       $hours = 0;
   
-      while($sec > 60){
+      while($sec > 60){ 
           $minutes++;
           $sec -= 60;
       }
@@ -75,6 +83,34 @@
       }
       
       return $totalTime;
+    } 
+    
+    
+    //Compares array to a space seperated string of answers
+    //Checked = array / correct = string
+    function CompareArray($checked, $correct, $num){
+        $correct = strtolower($correct);
+        $correctArray = explode(" ", $correct);
+        
+        // echo "<h2>~~~</h2>CORRECT ANSWERS: ";
+        // print_r($correctArray);
+        // echo "<br>USER SELECTED: ";
+        // print_r($checked);
+        // echo "<br><br>";
+        
+        for($i = 'a', $j = 0; $i < 'g'; $i++){
+            // echo "$i";
+            if(in_array($i, $correctArray) == in_array($i, $correctArray)){
+                // echo "<br>MATCH</br>";
+                $j++;
+            }
+        }
+        
+        $perc = $j / $num;
+        // echo "<br>Correct = $j / $num = $perc<br>";
+        
+        return $j / 2;
+        
     }
     
 ?>

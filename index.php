@@ -125,6 +125,7 @@
       <form action="submit.php" method="post">
         <input type="hidden" name="startTime" value="" id="startTime">
         <?php echo $quizPrint ?>
+        <input type="submit" value="Submit Answers">
         </form>
     </div>
   </div>
