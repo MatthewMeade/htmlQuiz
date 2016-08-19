@@ -11,10 +11,11 @@
   }
   
   $settings = parse_ini_file("settings/quizSettings.ini", true); //Settings.ini
+  extract($settings);
   
-  CheckForUpdate();
   
-  
+  $questionsArray = array();
+  $tagsArray = array();
   
   function CheckForUpdate(){
       
@@ -26,6 +27,8 @@
           $totalString = $totalString . file_get_contents("settings/".$value);
         }
     }
+    
+    file_put_contents("combinedSettings", $totalString);
     
     $files = scandir("./templates");
     
@@ -74,6 +77,12 @@
     
     global $answers;
     file_put_contents("correctAnswers", json_encode($answers));
+    
+    global $tagsArray;
+    // print_r($tagsArray);
+    file_put_contents("tags", json_encode($tagsArray));
+    
+    
 
     
   
@@ -97,6 +106,9 @@
       }
       
       return $retArray;
+      global $questionsArray;
+      echo("Test");
+      print_r($questions);
   }
   
   
@@ -132,6 +144,13 @@
       //Increment total questions counter
       global $numQuestions;
       $numQuestions++;
+      // 
+      // global $questionsArray;
+      // $questionsArray[$name] = $new;
+      
+      global $tagsArray;
+      $tagsArray[$name] = $question["tag"];
+      
       
       return $new;
 

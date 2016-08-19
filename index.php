@@ -1,6 +1,7 @@
 <?php 
 
   include 'load.php';
+  CheckForUpdate();
   
   global $settings;
   
@@ -150,7 +151,7 @@
   <script type="text/javascript" src="scripts/start.js"></script>
   
   <script type="text/javascript" src="scripts/timer.js"></script>
-  
+
   <script type="text/javascript">
     
 

@@ -1,40 +1,73 @@
 <?php
-
     include 'load.php';
+    // print_r($tags);
+    
     
     $total = 0;
     $score = 0;
-
+    
     $answers = json_decode(file_get_contents("correctAnswers"));
-    // print_r($answers);
-    // echo "<br>";
-    // print_r($_POST);
-    // echo "<br><br><br>";
-    // print_r($_POST["inlineSelect"]);
+    
+    $questionTags = json_decode(file_get_contents("tags"), true);
+    // print_r($questionTags);
+    
+    $tags = $settings["tags"];
+    
+    
+    $tagScore;// = array();
+    $tagCount;// = array();
+    $tagGrades;// = array();
+    
+    foreach ($tags as $value) {
+        $tagScore[$value] = 0;
+        $tagCount[$value] = 0;
+        $tagGrades[$value] = 0;
+    }
+
+
     
     if($_POST == NULL){
       echo "<h1>Something went wrong!</h1> <a href='index.php'>If you didn't take the test yet, click here</a>";
       return;
     }
-
+    
     foreach ($answers as $question => $correctAnswer) {
+      
+      $t = $questionTags[$question];
       $total++;
+      $tagCount[$t]++;
+      
+      if(!isset($_POST[$question])){
+        continue;
+      }
+      
       if(is_array($_POST[$question])){
-        $total += 2;
+        $total ++;
         $score += CompareArray($_POST[$question], $correctAnswer, 6);
+        $tagScore[$t]++;
        }
        else if($_POST[$question] == strtolower($correctAnswer)){
           $score++;
+          $tagScore[$t]++;
+      }
+      
+      if($tagCount[$t] != 0){
+        $tagGrades[$t] = $tagScore[$t] / $tagCount[$t];
       }
      
       
     }
+    // echo "<br><br>";
+    // print_r($questionTags);
+    
 
     $grade = $score/$total * 100;
     
     if($_POST == NULL){
       $grade = 80;
     }
+    
+    $grade = round($grade);
     
     
 
@@ -92,24 +125,23 @@
         $correct = strtolower($correct);
         $correctArray = explode(" ", $correct);
         
-        // echo "<h2>~~~</h2>CORRECT ANSWERS: ";
-        // print_r($correctArray);
-        // echo "<br>USER SELECTED: ";
-        // print_r($checked);
-        // echo "<br><br>";
+        echo "<h2>~~~</h2>CORRECT ANSWERS: ";
+        print_r($correctArray);
+        echo "<br>USER SELECTED: ";
+        print_r($checked);
+        echo "<br><br>";
         
-        for($i = 'a', $j = 0; $i < 'g'; $i++){
-            // echo "$i";
-            if(in_array($i, $correctArray) == in_array($i, $correctArray)){
-                // echo "<br>MATCH</br>";
-                $j++;
-            }
+        $optionsArray = array("a", "b", "c", "d", "e", "f", "g", "h", "i");
+        $score = 0;
+        
+        for($i = 0; $i < $num; $i++){
+          $j = $optionsArray[$i];
+          if(in_array($j, $correctArray) == in_array($j, $checked)){
+            $score++;
+          }
         }
         
-        $perc = $j / $num;
-        // echo "<br>Correct = $j / $num = $perc<br>";
-        
-        return $j / 2;
+        return $score / $num * 2;
         
     }
     
@@ -203,66 +235,22 @@
       <div class="col-md-4" id="rightList">
         <h3>What you know</h3>
         <div class="list-group">
-          <a a href="http://www.w3schools.com/html/html_intro.asp" target="_blank"  class="list-group-item list-group-item-action list-group-item-success">
-            Structure
-            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
-          </a>
           
-          <a href="http://www.w3schools.com/html/html_formatting.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
-            Text
-            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_lists.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
-            Lists
-            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_links.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
-            Links
-            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_images.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
-            Images
-            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_tables.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
-            Tables
-            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_forms.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
-            Forms
-            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html5_audio.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
-            Audio
-            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html5_video.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
-            Video
-            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_blocks.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
-            Inline/Block
-            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_attributes.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
-            Attributes
-            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_iframe.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-success">
-            iFrames
-            <span class="tag tag-default tag-pill pull-xs-right">100%</span>
-          </a>
-          
+          <?php $correctCounter = 0 ?>
+          <?php foreach ($tagGrades as $key => $value): ?>
+            <?php  if($value == 1): ?>
+              <?php $correctCounter++ ?>
+              <a class="list-group-item list-group-item-action list-group-item-success">
+              <?= strtoupper($key) ?>
+              <span class="tag tag-default tag-pill pull-xs-right"><?= round($value * 100); ?>%</span>
+              </a>
+            <?php endif; ?> 
+          <?php endforeach; ?>
+          <?php if($correctCounter == 0): ?>
+              <a class="list-group-item list-group-item-action list-group-item-danger"> Nothing! 
+                <span class="tag tag-default tag-pill pull-xs-right">D:</span>
+              </a>
+          <?php endif; ?>
         </div>
       </div>
       
@@ -273,66 +261,21 @@
       <div class="col-md-4" id="wrongList">
         <h3>What you don't know</h3>
         <div class="list-group">
-          <a a href="http://www.w3schools.com/html/html_intro.asp" target="_blank"  class="list-group-item list-group-item-action list-group-item-danger">
-            Structure
-            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_formatting.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
-            Text
-            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_lists.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
-            Lists
-            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_links.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
-            Links
-            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_images.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
-            Images
-            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_tables.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
-            Tables
-            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_forms.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
-            Forms
-            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html5_audio.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
-            Audio
-            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html5_video.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
-            Video
-            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_blocks.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
-            Inline/Block
-            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_attributes.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
-            Attributes
-            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
-          </a>
-          
-          <a href="http://www.w3schools.com/html/html_iframe.asp" target="_blank" class="list-group-item list-group-item-action list-group-item-danger">
-            iFrames
-            <span class="tag tag-default tag-pill pull-xs-right">10%</span>
-          </a>
-          
+          <?php $incorrectCounter = 0 ?>
+          <?php foreach ($tagGrades as $key => $value): ?>
+            <?php  if($value != 1): ?>
+            <?php $incorrectCounter++ ?>
+            <a class="list-group-item list-group-item-action list-group-item-danger">
+            <?= strtoupper($key) ?>
+            <span class="tag tag-default tag-pill pull-xs-right"><?= round($value * 100); ?>%</span>
+            </a>
+          <?php endif; ?> 
+        <?php endforeach; ?>
+        <?php if($incorrectCounter == 0): ?>
+            <a class="list-group-item list-group-item-action list-group-item-success"> Nothing! 
+              <span class="tag tag-default tag-pill pull-xs-right">:D</span>
+            </a>
+        <?php endif; ?>
         </div>
     </div>
 

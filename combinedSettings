@@ -1,0 +1,155 @@
+[inlineSelect]
+class = check
+group = checkList
+question = "Select all inline elements"
+correct = A B C D
+shuffle = true
+optA = "&lt;b&gt;"
+optB = "&lt;span&gt;"
+optC = "&lt;input&gt;"
+optD = "&lt;sub&gt;"
+optE = "&lt;div&gt;"
+optF = "&lt;p&gt;"
+tag = blocks
+
+[newElements]
+class = check
+group = checkList
+question = "Check all elements that were introduced in HTML5"
+correct = A D E
+shuffle = true
+optA = "&lt;article&gt;"
+optB = "&lt;abbr&gt;"
+optC = "&lt;thead&gt;"
+optD = "&lt;figure&gt;"
+optE = "&lt;nav&gt;"
+optF = "&lt;strike&gt"
+tag = theory[htmlTemplate]
+class = quadImage
+group = multipleChoice
+question = "Which is the correct way to start a HTML page? Test"
+correct = B
+shuffle = true
+tag = structure
+
+[formGrouping]
+class = quadImage
+group = multipleChoice
+question  = Which is the correct HTML for grouping form elements?
+correct = C
+shuffle = true
+tag = forms
+
+[bold]
+class = textLine
+group = multipleChoice
+question = Which creates bold text?
+correct = A
+shuffle = true
+optA = "&lt;b&gt;Text&lt;/b&gt;"
+optB = "&lt;bold&gt;Text&lt;/bold&gt;"
+optC = "&lt;p style='bold'&gt;Text&lt;/p&gt;"
+optD = "&lt;p bold&gt;Text&lt;/p&gt;"
+tah = text
+
+[fieldset]
+class = textLine
+group = multipleChoice
+question = "What does the &lt;fieldset&gt; element used for?"
+correct = B
+shuffle = true
+optA = To create a form
+optB = To group several controls and labels together
+optC = To provide a caption to a form group
+optD = To create interactive controls
+tag = forms
+
+[textStyle]
+class= imageTop
+group = multipleChoice
+question = "What HTML creates the following text: </legend><p class="outputExample"><b>HTML</b> is <ins>the</ins> best language <i>ever</i></p>"
+correct = C
+shuffle = false
+optA = A
+optB = B
+optC = C
+optD = D
+tag = text
+
+[formMethod]
+class = imageTop
+group = multipleChoice
+question = "Which form is valid and sends the variables in the url?"
+correct = A
+shuffle = false
+optA = A
+optB = B
+optC = C
+optD = D
+tag = forms
+
+[escapeError]
+class = imageLeft
+group = multipleChouce
+question = "On what line is the mistake?"
+correct = B
+shuffle = true
+optA = 8
+optB = 12
+optC = 16
+optD = 15
+tag = tableserror_reporting = E_ALL
+display_errors = On[quiz]
+title = "Html Quiz "
+leadDescription = "When you are ready to begin click the button below, you will be timed. </br>Once the quiz is submitted you will be directed to your results page";
+
+[groups]
+1 = multipleChoice
+2 = trueFalse 
+3 = checkList
+
+[groupsDisplay]
+multipleChoice = "Multiple Choice"
+trueFalse = "True/False"
+checkList = "Check Lists"
+
+[tags]
+1 = structure
+2 = forms
+3 = text
+4 = tables
+5 = theory
+6 = blocks
+
+
+[classes]
+1 = quadImage
+2 = textLine
+3 = imageTop
+4 = imageLeft
+5 = trueFalse
+6 = checkList
+
+[multipleChoice]
+1 = quadImage
+2 = textLine
+3 = imageTop
+4 = imageLeft
+
+[trueFalse]
+1 = trueFalse
+
+[checkList]
+1 = checkList[htmlMeaning]
+class = trueFalse 
+group = trueFalse
+question = "HTML stands for Hyper Text Markup Language"
+correct = A
+tag = theory
+
+[breakBlock]
+class = trueFalse 
+group = trueFalse
+question = "The &lt;br&gt; tag is a block level element"
+correct = B
+tag = blocks

@@ -125,13 +125,14 @@ img{
   padding: 20px;
 }
 
-.ImgLeft{
+.imgLeft{
   display: block;
   float: left;
+  background-color: red;
   width: 50%;
 }
 
-.ImgLeftAnswers{
+.imgLeftAnswers{
   margin-top: 10px;
   float: left;
 }
@@ -140,7 +141,7 @@ img{
   padding-bottom: 30px;
 } 
 
-.text .ImgLeftAnswers{
+.text .imgLeftAnswers{
   float: none;
   font-size: 175%;
 }
